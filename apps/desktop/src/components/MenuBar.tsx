@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, Music2, Eye, HelpCircle, Guitar, Minus, Maximize2, X, Loader2, Settings, Library, Play, Radio } from "lucide-react";
+import { Music2, HelpCircle, Guitar, Minus, Maximize2, X, Loader2, Settings, Library, Play, Radio } from "lucide-react";
 import { Window } from '@tauri-apps/api/window';
 
 interface MenuBarProps {

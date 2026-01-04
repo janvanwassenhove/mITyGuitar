@@ -295,6 +295,82 @@
   color: var(--color-text-primary);
 }
 
+.metadata-value.editable {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metadata-value.editable:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.metadata-value.editable .edit-icon {
+  opacity: 0;
+  font-size: 0.9em;
+  transition: opacity 0.2s;
+}
+
+.metadata-value.editable:hover .edit-icon {
+  opacity: 0.6;
+}
+
+.editable-time-sig {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-sig-input {
+  width: 50px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-primary);
+}
+
+.time-sig-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.time-sig-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.time-sig-btn.save {
+  background-color: #22c55e;
+  color: white;
+}
+
+.time-sig-btn.save:hover {
+  background-color: #16a34a;
+}
+
+.time-sig-btn.cancel {
+  background-color: #ef4444;
+  color: white;
+}
+
+.time-sig-btn.cancel:hover {
+  background-color: #dc2626;
+}
+
 /* Lyrics Section */
 .lyrics-section {
   background: var(--color-bg-secondary);
@@ -384,7 +460,6 @@
 .lyrics-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   font-family: "Courier New", Consolas, monospace;
   width: 100%;
   position: relative;
@@ -393,7 +468,7 @@
 .lyric-line-container {
   position: relative;
   width: 100%;
-  min-height: 3rem;
+  min-height: 120px;
 }
 
 .lyric-line-wrapper {
@@ -405,8 +480,9 @@
 .timeline-ruler-inline {
   position: relative;
   width: 100%;
-  height: 35px;
-  margin-bottom: 0.5rem;
+  height: 25px; /* Increased height to accommodate higher positioned markers */
+  margin-bottom: 0.5rem; /* Reduced back to reasonable spacing */
+  margin-top: 0.5rem;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -416,17 +492,17 @@
   flex-direction: column;
   align-items: center;
   transform: translateX(-50%);
+  top: -10px; /* Move timeline markers up */
 }
 
 .timeline-tick-label-inline {
   font-size: 0.6875rem;
   font-weight: 600;
   color: var(--color-text-muted);
-  margin-bottom: 0.25rem;
   font-family: "Courier New", monospace;
   white-space: nowrap;
   background: var(--color-bg-tertiary);
-  padding: 0.125rem 0.375rem;
+  padding: 0.25rem 0.5rem; /* Increased padding */
   border-radius: 3px;
   border: 1px solid var(--color-border);
 }
@@ -441,7 +517,7 @@
 .chord-line-wrapper {
   position: relative;
   height: 1.5rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
@@ -459,13 +535,22 @@
   z-index: 1;
 }
 
-.lyric-text {
+.lyric-line-wrapper {
+  position: relative;
+  height: 2rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lyric-word {
+  position: absolute;
   font-size: 1.0625rem;
   line-height: 1.6;
   color: var(--color-text-primary);
   white-space: nowrap;
-  overflow: visible;
-  padding-left: 0.5rem;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .no-lyrics {

@@ -1,5 +1,23 @@
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize};
 use std::collections::HashMap;
+
+/// Custom deserializer for timeBeat that accepts both string and number
+fn deserialize_time_beat<'de, D>(deserializer: D) -> Result<String, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum StringOrNumber {
+        String(String),
+        Number(f64),
+    }
+
+    match StringOrNumber::deserialize(deserializer)? {
+        StringOrNumber::String(s) => Ok(s),
+        StringOrNumber::Number(n) => Ok(n.to_string()),
+    }
+}
 
 /// Main song chart structure
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -80,7 +98,7 @@ pub struct ChordEvent {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct WordAnnotation {
     pub word: String,
-    #[serde(rename = "timeBeat")]
+    #[serde(rename = "timeBeat", deserialize_with = "deserialize_time_beat")]
     pub time_beat: String,
 }
 

@@ -87,7 +87,7 @@ export default function MappingWizardView() {
       "WhammyBar": "Axis: RightStickX",
       "TouchStrip": "Axis: LeftStickY"
     };
-    return defaultMappings[actionName] || "No default mapping";
+    return defaultMappings[actionName as keyof typeof defaultMappings] || "No default mapping";
   };
 
   // Load current mappings for reference
@@ -515,11 +515,11 @@ export default function MappingWizardView() {
                     const axisEvents = captureState.captured_events.filter(e => e.axis);
                     
                     if (buttonEvents.length > 0) {
-                      const buttonCounts = {};
+                      const buttonCounts: Record<number, number> = {};
                       buttonEvents.forEach(e => {
-                        buttonCounts[e.button] = (buttonCounts[e.button] || 0) + 1;
+                        buttonCounts[e.button!] = (buttonCounts[e.button!] || 0) + 1;
                       });
-                      const mostCommon = Object.entries(buttonCounts).sort(([,a], [,b]) => b - a)[0];
+                      const mostCommon = Object.entries(buttonCounts).sort(([,a], [,b]) => (b as number) - (a as number))[0];
                       return `Button: ${mostCommon[0]} (detected ${mostCommon[1]} times)`;
                     } else if (axisEvents.length > 0) {
                       const axis = axisEvents[0];

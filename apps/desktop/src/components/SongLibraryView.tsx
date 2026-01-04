@@ -46,7 +46,11 @@ interface ChordEvent {
 interface LyricEvent {
   startBeat: number;
   text?: string; // Legacy format
-  annotations?: Array<{ word: string; timeBeat: string }>; // New format
+  annotations?: Array<{ 
+    word: string; 
+    timeBeat: string | number; // SPEC: Quarter-note beat offset from startBeat (parse as number)
+    // Note: Bar-fraction values (0.33, 0.67, etc.) are INVALID and will be auto-migrated
+  }>; // New format
 }
 
 interface LyricLine {
@@ -54,8 +58,6 @@ interface LyricLine {
   words: Array<{ word: string; position: number }>; // Individual word positions
   startBeat: number;
   endBeat: number;
-  timelinePosition: number;
-  width: number;
   chords: Array<{ position: number; chord: string }>;
   lineMarkers: Array<{ beat: number; label: string; position: number }>;
 }
@@ -63,11 +65,15 @@ interface LyricLine {
 export default function SongLibraryView() {
   const [songLibrary, setSongLibrary] = useState<SongLibraryEntry[]>([]);
   const [selectedSong, setSelectedSong] = useState<SongChart | null>(null);
+  const [selectedSongFilename, setSelectedSongFilename] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [timelineMode, setTimelineMode] = useState<'beats' | 'seconds'>('beats');
   const [showUploadDialog, setShowUploadDialog] = useState(false);
   const [uploadResult, setUploadResult] = useState<{ songName: string; isError: boolean; errorMessage?: string } | null>(null);
+  const [editingTimeSig, setEditingTimeSig] = useState(false);
+  const [timeSigNumerator, setTimeSigNumerator] = useState<string>('4');
+  const [timeSigDenominator, setTimeSigDenominator] = useState<string>('4');
 
   useEffect(() => {
     loadSongLibrary();
@@ -83,6 +89,64 @@ export default function SongLibraryView() {
     }
   };
 
+  const handleStartEditTimeSig = () => {
+    if (selectedSong) {
+      setTimeSigNumerator(selectedSong.clock.timeSig[0].toString());
+      setTimeSigDenominator(selectedSong.clock.timeSig[1].toString());
+      setEditingTimeSig(true);
+    }
+  };
+
+  const handleSaveTimeSig = async () => {
+    if (!selectedSong || !selectedSongFilename) return;
+    
+    const numerator = parseInt(timeSigNumerator);
+    const denominator = parseInt(timeSigDenominator);
+    
+    // Validate input
+    if (isNaN(numerator) || isNaN(denominator) || numerator < 1 || denominator < 1) {
+      alert('Invalid time signature. Please enter positive numbers.');
+      return;
+    }
+    
+    // Validate common denominators (1, 2, 4, 8, 16)
+    if (![1, 2, 4, 8, 16].includes(denominator)) {
+      if (!confirm(`${denominator} is an unusual denominator. Continue anyway?`)) {
+        return;
+      }
+    }
+    
+    try {
+      // Update the song object
+      const updatedSong = {
+        ...selectedSong,
+        clock: {
+          ...selectedSong.clock,
+          timeSig: [numerator, denominator] as [number, number]
+        }
+      };
+      
+      // Save using backend command (reuse song_save_to_library)
+      await invoke('song_save_to_library', {
+        json: JSON.stringify(updatedSong, null, 2),
+        filename: selectedSongFilename
+      });
+      
+      // Update local state
+      setSelectedSong(updatedSong);
+      setEditingTimeSig(false);
+      
+      console.log(`Time signature updated to ${numerator}/${denominator}`);
+    } catch (err) {
+      console.error('Failed to save time signature:', err);
+      alert(`Failed to save time signature changes: ${err}`);
+    }
+  };
+
+  const handleCancelEditTimeSig = () => {
+    setEditingTimeSig(false);
+  };
+
   const handleUploadSong = async () => {
     try {
       const selected = await openDialog({
@@ -95,7 +159,7 @@ export default function SongLibraryView() {
 
       if (!selected) return;
 
-      const path = typeof selected === "string" ? selected : selected.path;
+      const path = typeof selected === "string" ? selected : (selected as any).path;
       
       // Read file using Tauri fs plugin
       const json = await readTextFile(path);
@@ -127,6 +191,7 @@ export default function SongLibraryView() {
     try {
       setLoading(true);
       setError(null);
+      setSelectedSongFilename(filename);
 
       // Check if it's a default song
       const isDefaultSong =
@@ -199,12 +264,38 @@ export default function SongLibraryView() {
     return Array.from(chords).sort();
   };
 
+  // Time signature utility functions
+  const beatsPerBarQN = (timeSig: [number, number]): number => {
+    // Number of quarter-note beats per bar: top * (4 / bottom)
+    // 4/4 => 4 * (4/4) = 4, 6/8 => 6 * (4/8) = 3, 3/4 => 3 * (4/4) = 3
+    return timeSig[0] * (4 / timeSig[1]);
+  };
+
+  const beatToSecondsQN = (beatQN: number, bpm: number): number => {
+    // Convert quarter-note beats to seconds
+    return beatQN * (60 / bpm);
+  };
+
+  // @ts-ignore - Utility function for future use
+  const secondsToBeatQN = (seconds: number, bpm: number): number => {
+    // Convert seconds to quarter-note beats
+    return seconds * bpm / 60;
+  };
+
+  // @ts-ignore - Utility function for future use
+  const beatQNToBarBeat = (beatQN: number, timeSig: [number, number]): { bar: number; beat: number } => {
+    // Convert absolute quarter-note beat to bar/beat position (1-indexed for display)
+    const beatsPerBar = beatsPerBarQN(timeSig);
+    const bar = Math.floor(beatQN / beatsPerBar) + 1; // Bars are 1-indexed
+    const beat = (beatQN % beatsPerBar) + 1; // Beats within bar are 1-indexed
+    return { bar, beat };
+  };
+
+  // @ts-ignore - Legacy function kept for compatibility
   const beatsToSeconds = (beats: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]): number => {
-    // Count-in offset: countInBeats = countInBars * timeSigTop
+    // Legacy function - keeping for compatibility
     const countInBeats = countInBars * timeSig[0];
     const totalBeats = beats + countInBeats;
-    // secondsPerBeat = 60 / bpm
-    // timeSec = beat * secondsPerBeat
     return (totalBeats / bpm) * 60;
   };
 
@@ -214,26 +305,92 @@ export default function SongLibraryView() {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const getTimeLabel = (beat: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]): string => {
+  const getTimeLabel = (beat: number, bpm: number, timeSig?: [number, number]): string => {
     if (timelineMode === 'beats') {
-      return `${beat}`;
+      if (timeSig) {
+        const { bar, beat: beatNum } = beatQNToBarBeat(beat, timeSig);
+        return `${bar}.${beatNum}`;
+      }
+      return `${Math.round(beat)}`;
     } else {
-      const seconds = beatsToSeconds(beat, bpm, countInBars, timeSig);
+      // Use quarter-note beat to seconds conversion
+      const seconds = beatToSecondsQN(beat, bpm);
       return formatTime(seconds);
     }
   };
 
-  const getLineTimelineMarkers = (startBeat: number, endBeat: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]) => {
+  // VALIDATION: Detect INVALID bar-fraction data (should be quarter-note beats per spec)
+  const detectInvalidBarFractionData = (lyric: LyricEvent): boolean => {
+    if (!lyric.annotations || lyric.annotations.length < 3) return false;
+    
+    // Parse timeBeat values as numbers (per spec)
+    const timeBeatValues = lyric.annotations.map(ann => 
+      typeof ann.timeBeat === 'number' ? ann.timeBeat : parseFloat(ann.timeBeat)
+    );
+    
+    // Check for common bar fraction patterns (0.33, 0.67, 0.25, 0.5, 0.75)
+    // These indicate INVALID data that used bar fractions instead of quarter-note beats
+    const hasCommonFractions = timeBeatValues.some(val => {
+      const remainder = val % 1;
+      return Math.abs(remainder - 0.33) < 0.05 || 
+             Math.abs(remainder - 0.67) < 0.05 || 
+             Math.abs(remainder - 0.25) < 0.05 || 
+             Math.abs(remainder - 0.5) < 0.05 || 
+             Math.abs(remainder - 0.75) < 0.05;
+    });
+    
+    if (hasCommonFractions) return true;
+    
+    // Fallback: Calculate span in quarter-note beats if interpreted as beats
+    const spanBeatsQN = Math.max(...timeBeatValues) - Math.min(...timeBeatValues);
+    
+    // If words >= 5 and span < 2 quarter beats, likely invalid bar fractions
+    return lyric.annotations.length >= 5 && spanBeatsQN < 2.0;
+  };
+
+  // AUTO-MIGRATION: Convert INVALID bar-fraction data to proper quarter-note beats
+  const convertBarFractionToBeats = (timeBeat: string | number, timeSig: [number, number]): number => {
+    const timeValue = typeof timeBeat === 'number' ? timeBeat : parseFloat(timeBeat);
+    const beatsPerBar = beatsPerBarQN(timeSig);
+    
+    // Convert bar fraction to quarter-note beats (per spec)
+    return timeValue * beatsPerBar;
+  };
+
+  // VALIDATION: Check timing data against spec (quarter-note beats)
+  const validateLyricTiming = (lyric: LyricEvent, timeSig: [number, number]): string[] => {
+    const warnings: string[] = [];
+    
+    if (!lyric.annotations || lyric.annotations.length === 0) return warnings;
+    
+    const wordCount = lyric.annotations.length;
+    // Parse timeBeat as numbers per spec
+    const timeBeatValues = lyric.annotations.map(ann => 
+      typeof ann.timeBeat === 'number' ? ann.timeBeat : parseFloat(ann.timeBeat)
+    );
+    const spanBeatsQN = Math.max(...timeBeatValues) - Math.min(...timeBeatValues);
+    
+    const beatsPerBar = beatsPerBarQN(timeSig);
+    const minExpectedSpan = Math.min(2.0, 0.5 * beatsPerBar);
+    
+    if (wordCount >= 5 && spanBeatsQN < minExpectedSpan) {
+      warnings.push(`Dense timing: ${wordCount} words in ${spanBeatsQN.toFixed(1)} quarter-note beats (expected ≥${minExpectedSpan.toFixed(1)})`);
+    }
+    
+    return warnings;
+  };
+
+  const getLineTimelineMarkers = (startBeat: number, endBeat: number, bpm: number, timeSig: [number, number]) => {
     const markers: Array<{ beat: number; label: string; position: number }> = [];
     const lineRange = endBeat - startBeat;
-    const interval = lineRange > 16 ? 8 : (lineRange > 8 ? 4 : 2); // Adaptive interval
+    const interval = timelineMode === 'beats' ? 1 : 2; // Show every beat or every 2 beats for seconds
     
     for (let beat = Math.ceil(startBeat / interval) * interval; beat <= endBeat; beat += interval) {
       if (beat >= startBeat && beat <= endBeat) {
         const position = ((beat - startBeat) / lineRange) * 100;
         markers.push({ 
           beat, 
-          label: getTimeLabel(beat, bpm, countInBars, timeSig),
+          label: getTimeLabel(beat, bpm, timeSig),
           position: Math.max(0, Math.min(100, position))
         });
       }
@@ -242,6 +399,7 @@ export default function SongLibraryView() {
     return markers;
   };
 
+  // @ts-ignore - Function for future timeline features
   const getFullTimelineMarkers = (chart: SongChart) => {
     if (!chart.lyrics || chart.lyrics.length === 0) return { markers: [], maxBeat: 0 };
     
@@ -249,7 +407,6 @@ export default function SongLibraryView() {
     const maxBeat = Math.max(...chart.lyrics.map(l => l.startBeat ?? (l as any).beat ?? 0));
     const markers: Array<{ beat: number; label: string; position: number }> = [];
     const interval = 8; // Mark every 8 beats
-    
     const totalRange = maxBeat - minBeat;
     
     for (let beat = Math.floor(minBeat / interval) * interval; beat <= maxBeat; beat += interval) {
@@ -287,92 +444,148 @@ export default function SongLibraryView() {
       return beatA - beatB;
     });
 
-    const minBeat = Math.min(...sortedLyrics.map(l => l.startBeat ?? (l as any).beat ?? 0));
-    const maxBeat = Math.max(...sortedLyrics.map(l => l.startBeat ?? (l as any).beat ?? 0));
-    const totalRange = maxBeat - minBeat;
+    // Calculate beat range for timeline
+    const maxBeat = Math.max(...sortedLyrics.map(l => l.startBeat ?? (l as any).beat ?? 0), ...allChordEvents.map(c => c.startBeat ?? (c as any).beat ?? 0)) + 16; // Extend beyond last event
 
     const lines: LyricLine[] = [];
+    
+    // Find the first lyric beat
+    const firstLyricBeat = sortedLyrics.length > 0 ? (sortedLyrics[0].startBeat ?? (sortedLyrics[0] as any).beat ?? 0) : 0;
+    
+    // Create sections from beat 0 to cover the entire timeline
+    const sectionSize = 4; // 4 beats per section
+    
+    // Add empty sections from 0 to first lyric
+    for (let beat = 0; beat < firstLyricBeat; beat += sectionSize) {
+      const sectionEnd = Math.min(beat + sectionSize, firstLyricBeat);
+      
+      // Find chords in this empty section
+      const chordsInRange = sortedChords.filter(c => {
+        const chordBeat = c.startBeat ?? (c as any).beat ?? 0;
+        return chordBeat >= beat && chordBeat < sectionEnd;
+      }).map(c => {
+        const chordBeat = c.startBeat ?? (c as any).beat ?? 0;
+        const position = ((chordBeat - beat) / (sectionEnd - beat)) * 100;
+        return { chord: c.chord, position: Math.max(0, Math.min(100, position)) };
+      });
+      
+      const lineMarkers = getLineTimelineMarkers(beat, sectionEnd, chart.clock.bpm, chart.clock.timeSig);
+      
+      lines.push({
+        startBeat: beat,
+        endBeat: sectionEnd,
+        lyrics: '', // Empty section
+        words: [],
+        lineMarkers,
+        chords: chordsInRange
+      });
+    }
 
+    // Process actual lyrics
     sortedLyrics.forEach((lyric, lyricIndex) => {
       const lyricBeat = lyric.startBeat ?? (lyric as any).beat ?? 0;
       
       // Determine the end beat for this line
       let lineEndBeat: number;
       if (lyric.annotations && lyric.annotations.length > 0) {
-        // Use the last annotation's timeBeat as the end
+        // VALIDATION: Check if data contains invalid bar fractions
+        const hasInvalidData = detectInvalidBarFractionData(lyric);
+        
+        // Get the last annotation's timing
         const lastAnnotation = lyric.annotations[lyric.annotations.length - 1];
-        lineEndBeat = parseFloat(lastAnnotation.timeBeat) + 0.5; // Add a small buffer
+        let lastWordBeatOffset: number;
+        
+        if (hasInvalidData) {
+          // AUTO-MIGRATE: Convert invalid bar-fraction data to proper quarter-note beats
+          lastWordBeatOffset = convertBarFractionToBeats(lastAnnotation.timeBeat, chart.clock.timeSig);
+          console.warn(`Line ${lyricIndex}: INVALID bar-fraction data detected, auto-migrating: ${lastAnnotation.timeBeat} bars → ${lastWordBeatOffset} beats`);
+        } else {
+          // Parse as quarter-note beat offset (per spec)
+          lastWordBeatOffset = typeof lastAnnotation.timeBeat === 'number' ? 
+            lastAnnotation.timeBeat : parseFloat(lastAnnotation.timeBeat);
+        }
+        
+        lineEndBeat = lyricBeat + lastWordBeatOffset + 0.5; // Add buffer
+        console.log(`Line ${lyricIndex}: lastAnnotation.timeBeat = ${lastAnnotation.timeBeat}, offset = ${lastWordBeatOffset} beats, lineEndBeat = ${lineEndBeat}`);
       } else {
         // Fallback to next lyric's start or max beat
         lineEndBeat = lyricIndex < sortedLyrics.length - 1 
           ? (sortedLyrics[lyricIndex + 1].startBeat ?? (sortedLyrics[lyricIndex + 1] as any).beat ?? maxBeat + 8)
           : maxBeat + 8;
+        console.log(`Line ${lyricIndex}: fallback lineEndBeat = ${lineEndBeat}`);
       }
 
-      // Process words with individual positions
+      // Process words with individual positions using quarter-note beats (per spec)
       const words: Array<{ word: string; position: number }> = [];
       let lyricText = '';
+      const warnings: string[] = [];
       
       if (lyric.annotations && lyric.annotations.length > 0) {
+        // VALIDATION: Check for invalid bar-fraction data
+        const hasInvalidData = detectInvalidBarFractionData(lyric);
+        
+        if (hasInvalidData) {
+          warnings.push('INVALID DATA: timeBeat values appear to be bar fractions (should be quarter-note beats per spec)');
+        }
+        
+        // Validate timing
+        const timingWarnings = validateLyricTiming(lyric, chart.clock.timeSig);
+        warnings.push(...timingWarnings);
+        
+        // Calculate word positions
         const lineRange = lineEndBeat - lyricBeat;
         lyric.annotations.forEach(ann => {
-          const wordBeat = parseFloat(ann.timeBeat);
-          const wordOffset = wordBeat - lyricBeat;
-          const position = lineRange > 0 ? (wordOffset / lineRange) * 100 : 0;
+          let wordBeatQN: number;
+          
+          if (hasInvalidData) {
+            // AUTO-MIGRATE: Convert invalid bar-fraction data to proper quarter-note beats
+            wordBeatQN = convertBarFractionToBeats(ann.timeBeat, chart.clock.timeSig);
+          } else {
+            // Parse timeBeat as quarter-note beat offset from startBeat (per spec)
+            wordBeatQN = typeof ann.timeBeat === 'number' ? ann.timeBeat : parseFloat(ann.timeBeat);
+          }
+          
+          const position = lineRange > 0 ? (wordBeatQN / lineRange) * 100 : 0;
           words.push({
             word: ann.word,
             position: Math.max(0, Math.min(95, position))
           });
         });
+        
         lyricText = lyric.annotations.map(ann => ann.word).join(' ');
+        
+        // Log warnings
+        if (warnings.length > 0) {
+          console.warn(`Line ${lyricIndex} validation:`, warnings);
+        }
       } else {
         // Legacy format without annotations
         lyricText = lyric.text || '';
         words.push({ word: lyricText, position: 0 });
       }
 
-      const chordPositions: Array<{ position: number; chord: string }> = [];
-      const nextLyricBeat = lineEndBeat;
-
-      sortedChords.forEach((chordEvent) => {
-        const chordBeat = chordEvent.startBeat ?? (chordEvent as any).beat ?? 0;
-        if (chordBeat >= lyricBeat && chordBeat < nextLyricBeat) {
-          // Calculate position relative to the current line span
-          const lineRange = nextLyricBeat - lyricBeat;
-          const chordOffset = chordBeat - lyricBeat;
-          const position = lineRange > 0 ? (chordOffset / lineRange) * 100 : 0;
-          
-          chordPositions.push({
-            position: Math.max(0, Math.min(95, position)),
-            chord: chordEvent.chord
-          });
-        }
+      // Find chords in this line's time range
+      const chordsInRange = sortedChords.filter(c => {
+        const chordBeat = c.startBeat ?? (c as any).beat ?? 0;
+        return chordBeat >= lyricBeat && chordBeat < lineEndBeat;
+      }).map(c => {
+        const chordBeat = c.startBeat ?? (c as any).beat ?? 0;
+        const position = ((chordBeat - lyricBeat) / (lineEndBeat - lyricBeat)) * 100;
+        return { chord: c.chord, position: Math.max(0, Math.min(100, position)) };
       });
 
-      // Calculate this line's position on the global timeline
-      const timelinePosition = ((lyricBeat - minBeat) / totalRange) * 100;
-      const lineWidth = ((nextLyricBeat - lyricBeat) / totalRange) * 100;
-
       // Generate timeline markers for this line
-      const lineMarkers = getLineTimelineMarkers(
-        lyricBeat, 
-        nextLyricBeat, 
-        chart.clock.bpm,
-        chart.clock.countInBars ?? 0,
-        chart.clock.timeSig ?? [4, 4]
-      );
+      const lineMarkers = getLineTimelineMarkers(lyricBeat, lineEndBeat, chart.clock.bpm, chart.clock.timeSig);
 
-      console.log(`Line ${lyricIndex}: beat ${lyricBeat}-${nextLyricBeat}, markers: ${lineMarkers.length}, chords: ${chordPositions.length}`);
+      console.log(`Line ${lyricIndex}: beat ${lyricBeat}-${lineEndBeat}, markers: ${lineMarkers.length}, chords: ${chordsInRange.length}`);
 
       lines.push({
+        startBeat: lyricBeat,
+        endBeat: lineEndBeat,
         lyrics: lyricText,
         words,
-        startBeat: lyricBeat,
-        endBeat: nextLyricBeat,
-        timelinePosition: Math.max(0, Math.min(100, timelinePosition)),
-        width: Math.max(0, Math.min(100, lineWidth)),
-        chords: chordPositions.sort((a, b) => a.position - b.position),
-        lineMarkers
+        lineMarkers,
+        chords: chordsInRange
       });
     });
 
@@ -494,9 +707,37 @@ export default function SongLibraryView() {
                 </div>
                 <div className="metadata-item">
                   <span className="metadata-label">Time Signature</span>
-                  <span className="metadata-value">
-                    {selectedSong.clock.timeSig[0]}/{selectedSong.clock.timeSig[1]}
-                  </span>
+                  {editingTimeSig ? (
+                    <div className="metadata-value editable-time-sig">
+                      <input
+                        type="number"
+                        className="time-sig-input"
+                        value={timeSigNumerator}
+                        onChange={(e) => setTimeSigNumerator(e.target.value)}
+                        min="1"
+                        max="32"
+                        style={{ width: '40px' }}
+                      />
+                      <span>/</span>
+                      <input
+                        type="number"
+                        className="time-sig-input"
+                        value={timeSigDenominator}
+                        onChange={(e) => setTimeSigDenominator(e.target.value)}
+                        min="1"
+                        max="32"
+                        style={{ width: '40px' }}
+                      />
+                      <button onClick={handleSaveTimeSig} className="time-sig-btn save" title="Save">✓</button>
+                      <button onClick={handleCancelEditTimeSig} className="time-sig-btn cancel" title="Cancel">✕</button>
+                    </div>
+                  ) : (
+                    <span className="metadata-value editable" onClick={handleStartEditTimeSig} title="Click to edit">
+                      {selectedSong.clock.timeSig[0]}/{selectedSong.clock.timeSig[1]} 
+                      ({beatsPerBarQN(selectedSong.clock.timeSig)} quarter beats/bar)
+                      <span className="edit-icon">✎</span>
+                    </span>
+                  )}
                 </div>
                 {selectedSong.clock.key && (
                   <div className="metadata-item">
@@ -558,7 +799,17 @@ export default function SongLibraryView() {
                               </span>
                             ))}
                           </div>
-                          <div className="lyric-text">{line.lyrics}</div>
+                          <div className="lyric-line-wrapper">
+                            {line.words.map((wordInfo, wordIndex) => (
+                              <span
+                                key={wordIndex}
+                                className="lyric-word"
+                                style={{ left: `${wordInfo.position}%` }}
+                              >
+                                {wordInfo.word}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
                       ))}

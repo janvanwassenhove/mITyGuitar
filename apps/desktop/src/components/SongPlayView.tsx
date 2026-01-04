@@ -156,7 +156,7 @@ export default function SongPlayView() {
 
       if (!selected) return;
 
-      const path = typeof selected === "string" ? selected : selected.path;
+      const path = typeof selected === "string" ? selected : (selected as any).path;
       
       // Read file using Tauri fs plugin
       const json = await readTextFile(path);
@@ -740,7 +740,6 @@ function ChordHighway({ events, currentBeat, chordMappings, controllerState }: C
   const HIGHWAY_HEIGHT = 600;
   const STRIKE_LINE_POSITION = HIGHWAY_HEIGHT - 120;
   const STRIKE_ZONE_TOP = STRIKE_LINE_POSITION - STRIKE_ZONE_SIZE;
-  const STRIKE_ZONE_BOTTOM = STRIKE_LINE_POSITION + STRIKE_ZONE_SIZE;
 
   return (
     <div className="chord-highway" style={{ height: HIGHWAY_HEIGHT }}>

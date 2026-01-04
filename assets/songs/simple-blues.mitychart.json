@@ -47,56 +47,56 @@
   ],
   "lyrics": [
     { "startBeat": 0, "annotations": [
-      { "word": "♪", "timeBeat": "0.0" },
-      { "word": "Instrumental", "timeBeat": "2.0" },
-      { "word": "intro", "timeBeat": "5.0" },
-      { "word": "♪", "timeBeat": "7.0" }
+      { "word": "♪", "timeBeat": 0.0 },
+      { "word": "Instrumental", "timeBeat": 2.0 },
+      { "word": "intro", "timeBeat": 5.0 },
+      { "word": "♪", "timeBeat": 7.0 }
     ]},
     { "startBeat": 8, "annotations": [
-      { "word": "Simple", "timeBeat": "8.0" },
-      { "word": "three-chord", "timeBeat": "9.5" },
-      { "word": "blues", "timeBeat": "11.0" }
+      { "word": "Simple", "timeBeat": 0.0 },
+      { "word": "three-chord", "timeBeat": 1.5 },
+      { "word": "blues", "timeBeat": 3.0 }
     ]},
     { "startBeat": 12, "annotations": [
-      { "word": "Easy", "timeBeat": "12.0" },
-      { "word": "to", "timeBeat": "13.0" },
-      { "word": "play", "timeBeat": "13.5" },
-      { "word": "through", "timeBeat": "14.5" }
+      { "word": "Easy", "timeBeat": 0.0 },
+      { "word": "to", "timeBeat": 1.0 },
+      { "word": "play", "timeBeat": 1.5 },
+      { "word": "through", "timeBeat": 2.5 }
     ]},
     { "startBeat": 16, "annotations": [
-      { "word": "Perfect", "timeBeat": "16.0" },
-      { "word": "for", "timeBeat": "17.0" },
-      { "word": "practice", "timeBeat": "17.5" }
+      { "word": "Perfect", "timeBeat": 0.0 },
+      { "word": "for", "timeBeat": 1.0 },
+      { "word": "practice", "timeBeat": 1.5 }
     ]},
     { "startBeat": 20, "annotations": [
-      { "word": "Getting", "timeBeat": "20.0" },
-      { "word": "better", "timeBeat": "21.0" },
-      { "word": "at", "timeBeat": "22.0" },
-      { "word": "this!", "timeBeat": "22.5" }
+      { "word": "Getting", "timeBeat": 0.0 },
+      { "word": "better", "timeBeat": 1.0 },
+      { "word": "at", "timeBeat": 2.0 },
+      { "word": "this!", "timeBeat": 2.5 }
     ]},
     { "startBeat": 24, "annotations": [
-      { "word": "Feel", "timeBeat": "24.0" },
-      { "word": "the", "timeBeat": "25.0" },
-      { "word": "rhythm", "timeBeat": "25.5" },
-      { "word": "flow", "timeBeat": "27.0" }
+      { "word": "Feel", "timeBeat": 0.0 },
+      { "word": "the", "timeBeat": 1.0 },
+      { "word": "rhythm", "timeBeat": 1.5 },
+      { "word": "flow", "timeBeat": 3.0 }
     ]},
     { "startBeat": 28, "annotations": [
-      { "word": "Keep", "timeBeat": "28.0" },
-      { "word": "that", "timeBeat": "29.0" },
-      { "word": "steady", "timeBeat": "29.5" },
-      { "word": "tempo", "timeBeat": "31.0" }
+      { "word": "Keep", "timeBeat": 0.0 },
+      { "word": "that", "timeBeat": 1.0 },
+      { "word": "steady", "timeBeat": 1.5 },
+      { "word": "tempo", "timeBeat": 3.0 }
     ]},
     { "startBeat": 32, "annotations": [
-      { "word": "Almost", "timeBeat": "32.0" },
-      { "word": "at", "timeBeat": "33.0" },
-      { "word": "the", "timeBeat": "33.5" },
-      { "word": "end", "timeBeat": "34.0" },
-      { "word": "now", "timeBeat": "34.5" }
+      { "word": "Almost", "timeBeat": 0.0 },
+      { "word": "at", "timeBeat": 1.0 },
+      { "word": "the", "timeBeat": 1.5 },
+      { "word": "end", "timeBeat": 2.0 },
+      { "word": "now", "timeBeat": 2.5 }
     ]},
     { "startBeat": 36, "annotations": [
-      { "word": "♪", "timeBeat": "36.0" },
-      { "word": "Outro", "timeBeat": "38.0" },
-      { "word": "♪", "timeBeat": "40.0" }
+      { "word": "♪", "timeBeat": 0.0 },
+      { "word": "Outro", "timeBeat": 2.0 },
+      { "word": "♪", "timeBeat": 4.0 }
     ]}
   ],
   "sections": [

@@ -68,47 +68,47 @@
   ],
   "lyrics": [
     { "startBeat": 0, "annotations": [
-      { "word": "♪", "timeBeat": "0.0" },
-      { "word": "Instrumental", "timeBeat": "1.0" },
-      { "word": "intro", "timeBeat": "5.0" },
-      { "word": "♪", "timeBeat": "8.0" }
+      { "word": "♪", "timeBeat": 0.0 },
+      { "word": "Instrumental", "timeBeat": 1.0 },
+      { "word": "intro", "timeBeat": 5.0 },
+      { "word": "♪", "timeBeat": 8.0 }
     ]},
     { "startBeat": 12, "annotations": [
-      { "word": "Alas,", "timeBeat": "12.0" },
-      { "word": "my", "timeBeat": "13.5" },
-      { "word": "love,", "timeBeat": "15.0" },
-      { "word": "you", "timeBeat": "16.5" },
-      { "word": "do", "timeBeat": "18.0" },
-      { "word": "me", "timeBeat": "19.5" },
-      { "word": "wrong", "timeBeat": "21.0" }
+      { "word": "Alas,", "timeBeat": 0.0 },
+      { "word": "my", "timeBeat": 1.5 },
+      { "word": "love,", "timeBeat": 3.0 },
+      { "word": "you", "timeBeat": 4.5 },
+      { "word": "do", "timeBeat": 6.0 },
+      { "word": "me", "timeBeat": 7.5 },
+      { "word": "wrong", "timeBeat": 9.0 }
     ]},
     { "startBeat": 24, "annotations": [
-      { "word": "To", "timeBeat": "24.0" },
-      { "word": "cast", "timeBeat": "25.5" },
-      { "word": "me", "timeBeat": "27.0" },
-      { "word": "off", "timeBeat": "28.5" },
-      { "word": "discourteously", "timeBeat": "30.0" }
+      { "word": "To", "timeBeat": 0.0 },
+      { "word": "cast", "timeBeat": 1.5 },
+      { "word": "me", "timeBeat": 3.0 },
+      { "word": "off", "timeBeat": 4.5 },
+      { "word": "discourteously", "timeBeat": 6.0 }
     ]},
     { "startBeat": 36, "annotations": [
-      { "word": "For", "timeBeat": "36.0" },
-      { "word": "I", "timeBeat": "37.5" },
-      { "word": "have", "timeBeat": "39.0" },
-      { "word": "loved", "timeBeat": "40.5" },
-      { "word": "you", "timeBeat": "42.0" },
-      { "word": "oh", "timeBeat": "43.5" },
-      { "word": "so", "timeBeat": "44.0" },
-      { "word": "long", "timeBeat": "45.0" }
+      { "word": "For", "timeBeat": 0.0 },
+      { "word": "I", "timeBeat": 1.5 },
+      { "word": "have", "timeBeat": 3.0 },
+      { "word": "loved", "timeBeat": 4.5 },
+      { "word": "you", "timeBeat": 6.0 },
+      { "word": "oh", "timeBeat": 7.5 },
+      { "word": "so", "timeBeat": 8.0 },
+      { "word": "long", "timeBeat": 9.0 }
     ]},
     { "startBeat": 48, "annotations": [
-      { "word": "Delighting", "timeBeat": "48.0" },
-      { "word": "in", "timeBeat": "51.0" },
-      { "word": "your", "timeBeat": "52.5" },
-      { "word": "company", "timeBeat": "54.0" }
+      { "word": "Delighting", "timeBeat": 0.0 },
+      { "word": "in", "timeBeat": 3.0 },
+      { "word": "your", "timeBeat": 4.5 },
+      { "word": "company", "timeBeat": 6.0 }
     ]},
     { "startBeat": 60, "annotations": [
-      { "word": "♪", "timeBeat": "60.0" },
-      { "word": "Greensleeves", "timeBeat": "63.0" },
-      { "word": "♪", "timeBeat": "66.0" }
+      { "word": "♪", "timeBeat": 0.0 },
+      { "word": "Greensleeves", "timeBeat": 3.0 },
+      { "word": "♪", "timeBeat": 6.0 }
     ]}
   ],
   "sections": [

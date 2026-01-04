@@ -65,7 +65,7 @@ interface InstrumentInfo {
   instrument_type: 'SoundFont' | 'Virtual';
 }
 
-export default function LiveView({ genreInfo, onAction }: LiveViewProps) {
+export default function LiveView({ genreInfo: _genreInfo, onAction: _onAction }: LiveViewProps) {
   const [controllerState, setControllerState] = useState<ControllerState | null>(null);
   const [currentSoundfont, setCurrentSoundfont] = useState<string | null>(null);
   const [simulatorEnabled, setSimulatorEnabled] = useState<boolean>(false);
@@ -415,7 +415,7 @@ export default function LiveView({ genreInfo, onAction }: LiveViewProps) {
           <FretBoard
             mainChords={mainChords}
             soloChords={soloChords}
-            controllerState={controllerState}
+            controllerState={controllerState || undefined}
             isEditable={true}
             onChordEdit={handleChordEdit}
           />

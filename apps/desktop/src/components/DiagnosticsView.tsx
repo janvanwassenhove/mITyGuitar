@@ -129,7 +129,7 @@ export default function DiagnosticsView() {
         try {
           const events = await invoke<RawInputEvent[]>("get_raw_diagnostics");
           setRawEvents(events);
-          const [enabled, count] = await invoke<[boolean, number]>("get_raw_diagnostics_status");
+          const [_enabled, count] = await invoke<[boolean, number]>("get_raw_diagnostics_status");
           setEventCount(count);
         } catch (error) {
           console.error("Failed to load raw diagnostics:", error);

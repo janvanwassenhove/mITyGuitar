@@ -1,4 +1,3 @@
-import React from 'react';
 import FretButton from './FretButton';
 import './FretBoard.css';
 
