@@ -23,6 +23,7 @@ interface SongChart {
   clock: {
     bpm: number;
     timeSig: [number, number];
+    countInBars?: number;
     key?: string;
     subdivision?: string; // e.g., "8n", "16n"
   };
@@ -198,8 +199,13 @@ export default function SongLibraryView() {
     return Array.from(chords).sort();
   };
 
-  const beatsToSeconds = (beats: number, bpm: number): number => {
-    return (beats / bpm) * 60;
+  const beatsToSeconds = (beats: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]): number => {
+    // Count-in offset: countInBeats = countInBars * timeSigTop
+    const countInBeats = countInBars * timeSig[0];
+    const totalBeats = beats + countInBeats;
+    // secondsPerBeat = 60 / bpm
+    // timeSec = beat * secondsPerBeat
+    return (totalBeats / bpm) * 60;
   };
 
   const formatTime = (seconds: number): string => {
@@ -208,16 +214,16 @@ export default function SongLibraryView() {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const getTimeLabel = (beat: number, bpm: number): string => {
+  const getTimeLabel = (beat: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]): string => {
     if (timelineMode === 'beats') {
       return `${beat}`;
     } else {
-      const seconds = beatsToSeconds(beat, bpm);
+      const seconds = beatsToSeconds(beat, bpm, countInBars, timeSig);
       return formatTime(seconds);
     }
   };
 
-  const getLineTimelineMarkers = (startBeat: number, endBeat: number, bpm: number) => {
+  const getLineTimelineMarkers = (startBeat: number, endBeat: number, bpm: number, countInBars: number = 0, timeSig: [number, number] = [4, 4]) => {
     const markers: Array<{ beat: number; label: string; position: number }> = [];
     const lineRange = endBeat - startBeat;
     const interval = lineRange > 16 ? 8 : (lineRange > 8 ? 4 : 2); // Adaptive interval
@@ -227,7 +233,7 @@ export default function SongLibraryView() {
         const position = ((beat - startBeat) / lineRange) * 100;
         markers.push({ 
           beat, 
-          label: getTimeLabel(beat, bpm),
+          label: getTimeLabel(beat, bpm, countInBars, timeSig),
           position: Math.max(0, Math.min(100, position))
         });
       }
@@ -348,7 +354,15 @@ export default function SongLibraryView() {
       const lineWidth = ((nextLyricBeat - lyricBeat) / totalRange) * 100;
 
       // Generate timeline markers for this line
-      const lineMarkers = getLineTimelineMarkers(lyricBeat, nextLyricBeat, chart.clock.bpm);
+      const lineMarkers = getLineTimelineMarkers(
+        lyricBeat, 
+        nextLyricBeat, 
+        chart.clock.bpm,
+        chart.clock.countInBars ?? 0,
+        chart.clock.timeSig ?? [4, 4]
+      );
+
+      console.log(`Line ${lyricIndex}: beat ${lyricBeat}-${nextLyricBeat}, markers: ${lineMarkers.length}, chords: ${chordPositions.length}`);
 
       lines.push({
         lyrics: lyricText,

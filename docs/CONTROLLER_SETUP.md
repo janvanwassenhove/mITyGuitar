@@ -1,5 +1,8 @@
 # Controller Mapping Wizard Implementation Status
 
+![Controller Mapping Workflow](images/controller-flow.png)
+*Controller input processing and mapping workflow*
+
 ## ✅ Completed Backend (Rust)
 
 1. **Data Structures** (`mapping_profile.rs`)

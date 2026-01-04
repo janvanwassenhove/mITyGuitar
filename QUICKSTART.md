@@ -18,7 +18,16 @@ npm install
 ```
 
 2. **Run the app:**
+
+**Windows - Easy way:**
+```cmd
+# From project root
+start.bat
+```
+
+**All platforms:**
 ```powershell
+cd apps/desktop
 npm run tauri:dev
 ```
 
@@ -30,6 +39,9 @@ This will:
 ### First Launch
 
 The app starts in **simulator mode** by default, so no hardware is needed!
+
+![mITyGuitar Main Interface](docs/images/main-interface.png)
+*mITyGuitar main interface with fretboard visualization*
 
 ## Using the App
 
@@ -109,9 +121,22 @@ npm install
 
 ## Next Steps
 
-- Read [README.md](../README.md) for full documentation
-- Check `.github/instructions/mITyGuitar.instructions.md` for architecture details
-- Explore the crates for implementation details
+### Learn More
+- 📖 [Song Format Guide](docs/SONG_FORMAT.md) - Create custom songs
+- 🏗️ [Build Instructions](docs/BUILD.md) - Development setup
+- 🎸 [Architecture Overview](docs/ARCHITECTURE.md) - How it all works
+- 🎵 [SoundFont Integration](docs/SOUNDFONT_INTEGRATION.md) - Audio system details
+
+### Try These Features
+- **Load a Song**: Song Play → 📁 Song Library → ▶ Load greensleeves.mitychart.json
+- **Change Genres**: Menu → Chords → Genre → Try Rock vs Punk
+- **Check Diagnostics**: View → Diagnostics (see audio performance)
+- **Create Songs**: Use the [Song Format Guide](docs/SONG_FORMAT.md)
+
+### Community
+- Report issues on [GitHub](https://github.com/janvanwassenhove/mITyGuitar/issues)
+- Share your custom songs
+- Contribute improvements to the codebase
 
 ## Keyboard Shortcuts
 

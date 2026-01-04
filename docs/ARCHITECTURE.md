@@ -4,6 +4,9 @@
 
 A **working cross-platform desktop application** that transforms Rock Band guitar controllers into live musical instruments. This is a complete **vertical slice** with all core systems implemented.
 
+![System Architecture](images/architecture-diagram.png)
+*High-level architecture showing the flow from controller input to audio output*
+
 ## ✅ Fully Implemented Features
 
 ### 1. Complete Rust Backend (4 Crates)

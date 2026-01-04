@@ -1246,27 +1246,27 @@
       "annotations": [
         {
           "word": "Just",
-          "timeBeat": "4.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "one",
-          "timeBeat": "4.33"
+          "timeBeat": "0.33"
         },
         {
           "word": "more",
-          "timeBeat": "4.67"
+          "timeBeat": "0.67"
         },
         {
           "word": "tear",
-          "timeBeat": "5.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "to",
-          "timeBeat": "5.33"
+          "timeBeat": "1.33"
         },
         {
           "word": "cry",
-          "timeBeat": "5.67"
+          "timeBeat": "1.67"
         }
       ]
     },
@@ -1275,23 +1275,23 @@
       "annotations": [
         {
           "word": "One",
-          "timeBeat": "8.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "teardrop",
-          "timeBeat": "8.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "from",
-          "timeBeat": "8.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "my",
-          "timeBeat": "9.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "eye",
-          "timeBeat": "9.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1300,23 +1300,23 @@
       "annotations": [
         {
           "word": "You",
-          "timeBeat": "12.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "better",
-          "timeBeat": "12.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "save",
-          "timeBeat": "12.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "it",
-          "timeBeat": "13.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "for",
-          "timeBeat": "13.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1325,23 +1325,23 @@
       "annotations": [
         {
           "word": "The",
-          "timeBeat": "16.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "middle",
-          "timeBeat": "16.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "of",
-          "timeBeat": "16.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "the",
-          "timeBeat": "17.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "night",
-          "timeBeat": "17.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1350,19 +1350,19 @@
       "annotations": [
         {
           "word": "When",
-          "timeBeat": "20.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "things",
-          "timeBeat": "20.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "aren't",
-          "timeBeat": "21.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "black-and-white",
-          "timeBeat": "21.5"
+          "timeBeat": "1.5"
         }
       ]
     },
@@ -1371,15 +1371,15 @@
       "annotations": [
         {
           "word": "Enter,",
-          "timeBeat": "24.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "Troubadour:'Remember",
-          "timeBeat": "24.67"
+          "timeBeat": "0.67"
         },
         {
           "word": "24?'",
-          "timeBeat": "25.33"
+          "timeBeat": "1.33"
         }
       ]
     },
@@ -1388,39 +1388,39 @@
       "annotations": [
         {
           "word": "And",
-          "timeBeat": "28.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "when",
-          "timeBeat": "28.22"
+          "timeBeat": "0.22"
         },
         {
           "word": "I'm",
-          "timeBeat": "28.44"
+          "timeBeat": "0.44"
         },
         {
           "word": "back",
-          "timeBeat": "28.67"
+          "timeBeat": "0.67"
         },
         {
           "word": "in",
-          "timeBeat": "28.89"
+          "timeBeat": "0.89"
         },
         {
           "word": "Chicago,",
-          "timeBeat": "29.11"
+          "timeBeat": "1.11"
         },
         {
           "word": "I",
-          "timeBeat": "29.33"
+          "timeBeat": "1.33"
         },
         {
           "word": "feel",
-          "timeBeat": "29.56"
+          "timeBeat": "1.56"
         },
         {
           "word": "it",
-          "timeBeat": "29.78"
+          "timeBeat": "1.78"
         }
       ]
     },
@@ -1429,35 +1429,35 @@
       "annotations": [
         {
           "word": "Another",
-          "timeBeat": "32.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "version",
-          "timeBeat": "32.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "of",
-          "timeBeat": "32.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "me,",
-          "timeBeat": "32.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "I",
-          "timeBeat": "33.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "was",
-          "timeBeat": "33.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "in",
-          "timeBeat": "33.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "it",
-          "timeBeat": "33.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1466,35 +1466,35 @@
       "annotations": [
         {
           "word": "I",
-          "timeBeat": "36.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "wave",
-          "timeBeat": "36.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "goodbye",
-          "timeBeat": "36.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "to",
-          "timeBeat": "36.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "the",
-          "timeBeat": "37.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "end",
-          "timeBeat": "37.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "of",
-          "timeBeat": "37.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "beginning",
-          "timeBeat": "37.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1503,23 +1503,23 @@
       "annotations": [
         {
           "word": "This",
-          "timeBeat": "40.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "song",
-          "timeBeat": "40.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "has",
-          "timeBeat": "40.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "started",
-          "timeBeat": "41.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "now",
-          "timeBeat": "41.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1528,23 +1528,23 @@
       "annotations": [
         {
           "word": "And",
-          "timeBeat": "44.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "you're",
-          "timeBeat": "44.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "just",
-          "timeBeat": "44.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "finding",
-          "timeBeat": "45.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "out",
-          "timeBeat": "45.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1553,23 +1553,23 @@
       "annotations": [
         {
           "word": "Now",
-          "timeBeat": "48.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "isn't",
-          "timeBeat": "48.4"
+          "timeBeat": "0.4"
         },
         {
           "word": "that",
-          "timeBeat": "48.8"
+          "timeBeat": "0.8"
         },
         {
           "word": "a",
-          "timeBeat": "49.2"
+          "timeBeat": "1.2"
         },
         {
           "word": "laugh?",
-          "timeBeat": "49.6"
+          "timeBeat": "1.6"
         }
       ]
     },
@@ -1578,35 +1578,35 @@
       "annotations": [
         {
           "word": "A",
-          "timeBeat": "52.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "major",
-          "timeBeat": "52.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "sacrifice,",
-          "timeBeat": "52.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "but",
-          "timeBeat": "52.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "clueless",
-          "timeBeat": "53.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "at",
-          "timeBeat": "53.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "the",
-          "timeBeat": "53.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "time",
-          "timeBeat": "53.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1615,35 +1615,35 @@
       "annotations": [
         {
           "word": "Enter,",
-          "timeBeat": "56.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "Caroline:",
-          "timeBeat": "56.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "\"Just",
-          "timeBeat": "56.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "trust",
-          "timeBeat": "56.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "me,",
-          "timeBeat": "57.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "you'll",
-          "timeBeat": "57.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "be",
-          "timeBeat": "57.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "fine\"",
-          "timeBeat": "57.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1652,39 +1652,39 @@
       "annotations": [
         {
           "word": "And",
-          "timeBeat": "60.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "when",
-          "timeBeat": "60.22"
+          "timeBeat": "0.22"
         },
         {
           "word": "I'm",
-          "timeBeat": "60.44"
+          "timeBeat": "0.44"
         },
         {
           "word": "back",
-          "timeBeat": "60.67"
+          "timeBeat": "0.67"
         },
         {
           "word": "in",
-          "timeBeat": "60.89"
+          "timeBeat": "0.89"
         },
         {
           "word": "Chicago,",
-          "timeBeat": "61.11"
+          "timeBeat": "1.11"
         },
         {
           "word": "I",
-          "timeBeat": "61.33"
+          "timeBeat": "1.33"
         },
         {
           "word": "feel",
-          "timeBeat": "61.56"
+          "timeBeat": "1.56"
         },
         {
           "word": "it",
-          "timeBeat": "61.78"
+          "timeBeat": "1.78"
         }
       ]
     },
@@ -1693,35 +1693,35 @@
       "annotations": [
         {
           "word": "Another",
-          "timeBeat": "64.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "version",
-          "timeBeat": "64.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "of",
-          "timeBeat": "64.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "me,",
-          "timeBeat": "64.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "I",
-          "timeBeat": "65.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "was",
-          "timeBeat": "65.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "in",
-          "timeBeat": "65.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "it",
-          "timeBeat": "65.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1730,35 +1730,35 @@
       "annotations": [
         {
           "word": "I",
-          "timeBeat": "68.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "wave",
-          "timeBeat": "68.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "goodbye",
-          "timeBeat": "68.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "to",
-          "timeBeat": "68.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "the",
-          "timeBeat": "69.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "end",
-          "timeBeat": "69.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "of",
-          "timeBeat": "69.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "beginning",
-          "timeBeat": "69.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -1767,11 +1767,11 @@
       "annotations": [
         {
           "word": "(Goodbye,",
-          "timeBeat": "72.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "goodbye)",
-          "timeBeat": "73.0"
+          "timeBeat": "1.0"
         }
       ]
     },
@@ -1780,11 +1780,11 @@
       "annotations": [
         {
           "word": "(Goodbye,",
-          "timeBeat": "76.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "goodbye)",
-          "timeBeat": "77.0"
+          "timeBeat": "1.0"
         }
       ]
     },
@@ -1793,59 +1793,59 @@
       "annotations": [
         {
           "word": "You",
-          "timeBeat": "80.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "take",
-          "timeBeat": "80.14"
+          "timeBeat": "0.14"
         },
         {
           "word": "the",
-          "timeBeat": "80.29"
+          "timeBeat": "0.29"
         },
         {
           "word": "man",
-          "timeBeat": "80.43"
+          "timeBeat": "0.43"
         },
         {
           "word": "out",
-          "timeBeat": "80.57"
+          "timeBeat": "0.57"
         },
         {
           "word": "of",
-          "timeBeat": "80.71"
+          "timeBeat": "0.71"
         },
         {
           "word": "the",
-          "timeBeat": "80.86"
+          "timeBeat": "0.86"
         },
         {
           "word": "city,",
-          "timeBeat": "81.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "not",
-          "timeBeat": "81.14"
+          "timeBeat": "1.14"
         },
         {
           "word": "the",
-          "timeBeat": "81.29"
+          "timeBeat": "1.29"
         },
         {
           "word": "city",
-          "timeBeat": "81.43"
+          "timeBeat": "1.43"
         },
         {
           "word": "out",
-          "timeBeat": "81.57"
+          "timeBeat": "1.57"
         },
         {
           "word": "the",
-          "timeBeat": "81.71"
+          "timeBeat": "1.71"
         },
         {
           "word": "man",
-          "timeBeat": "81.86"
+          "timeBeat": "1.86"
         }
       ]
     },
@@ -1854,59 +1854,59 @@
       "annotations": [
         {
           "word": "You",
-          "timeBeat": "84.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "take",
-          "timeBeat": "84.14"
+          "timeBeat": "0.14"
         },
         {
           "word": "the",
-          "timeBeat": "84.29"
+          "timeBeat": "0.29"
         },
         {
           "word": "man",
-          "timeBeat": "84.43"
+          "timeBeat": "0.43"
         },
         {
           "word": "out",
-          "timeBeat": "84.57"
+          "timeBeat": "0.57"
         },
         {
           "word": "of",
-          "timeBeat": "84.71"
+          "timeBeat": "0.71"
         },
         {
           "word": "the",
-          "timeBeat": "84.86"
+          "timeBeat": "0.86"
         },
         {
           "word": "city,",
-          "timeBeat": "85.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "not",
-          "timeBeat": "85.14"
+          "timeBeat": "1.14"
         },
         {
           "word": "the",
-          "timeBeat": "85.29"
+          "timeBeat": "1.29"
         },
         {
           "word": "city",
-          "timeBeat": "85.43"
+          "timeBeat": "1.43"
         },
         {
           "word": "out",
-          "timeBeat": "85.57"
+          "timeBeat": "1.57"
         },
         {
           "word": "the",
-          "timeBeat": "85.71"
+          "timeBeat": "1.71"
         },
         {
           "word": "man",
-          "timeBeat": "85.86"
+          "timeBeat": "1.86"
         }
       ]
     },
@@ -1915,59 +1915,59 @@
       "annotations": [
         {
           "word": "You",
-          "timeBeat": "88.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "take",
-          "timeBeat": "88.14"
+          "timeBeat": "0.14"
         },
         {
           "word": "the",
-          "timeBeat": "88.29"
+          "timeBeat": "0.29"
         },
         {
           "word": "man",
-          "timeBeat": "88.43"
+          "timeBeat": "0.43"
         },
         {
           "word": "out",
-          "timeBeat": "88.57"
+          "timeBeat": "0.57"
         },
         {
           "word": "of",
-          "timeBeat": "88.71"
+          "timeBeat": "0.71"
         },
         {
           "word": "the",
-          "timeBeat": "88.86"
+          "timeBeat": "0.86"
         },
         {
           "word": "city,",
-          "timeBeat": "89.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "not",
-          "timeBeat": "89.14"
+          "timeBeat": "1.14"
         },
         {
           "word": "the",
-          "timeBeat": "89.29"
+          "timeBeat": "1.29"
         },
         {
           "word": "city",
-          "timeBeat": "89.43"
+          "timeBeat": "1.43"
         },
         {
           "word": "out",
-          "timeBeat": "89.57"
+          "timeBeat": "1.57"
         },
         {
           "word": "the",
-          "timeBeat": "89.71"
+          "timeBeat": "1.71"
         },
         {
           "word": "man",
-          "timeBeat": "89.86"
+          "timeBeat": "1.86"
         }
       ]
     },
@@ -1976,31 +1976,31 @@
       "annotations": [
         {
           "word": "You",
-          "timeBeat": "92.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "take",
-          "timeBeat": "92.29"
+          "timeBeat": "0.29"
         },
         {
           "word": "the",
-          "timeBeat": "92.57"
+          "timeBeat": "0.57"
         },
         {
           "word": "man",
-          "timeBeat": "92.86"
+          "timeBeat": "0.86"
         },
         {
           "word": "out",
-          "timeBeat": "93.14"
+          "timeBeat": "1.14"
         },
         {
           "word": "of",
-          "timeBeat": "93.43"
+          "timeBeat": "1.43"
         },
         {
           "word": "the",
-          "timeBeat": "93.71"
+          "timeBeat": "1.71"
         }
       ]
     },
@@ -2009,39 +2009,39 @@
       "annotations": [
         {
           "word": "And",
-          "timeBeat": "96.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "when",
-          "timeBeat": "96.22"
+          "timeBeat": "0.22"
         },
         {
           "word": "I'm",
-          "timeBeat": "96.44"
+          "timeBeat": "0.44"
         },
         {
           "word": "back",
-          "timeBeat": "96.67"
+          "timeBeat": "0.67"
         },
         {
           "word": "in",
-          "timeBeat": "96.89"
+          "timeBeat": "0.89"
         },
         {
           "word": "Chicago,",
-          "timeBeat": "97.11"
+          "timeBeat": "1.11"
         },
         {
           "word": "I",
-          "timeBeat": "97.33"
+          "timeBeat": "1.33"
         },
         {
           "word": "feel",
-          "timeBeat": "97.56"
+          "timeBeat": "1.56"
         },
         {
           "word": "it",
-          "timeBeat": "97.78"
+          "timeBeat": "1.78"
         }
       ]
     },
@@ -2050,35 +2050,35 @@
       "annotations": [
         {
           "word": "Another",
-          "timeBeat": "100.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "version",
-          "timeBeat": "100.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "of",
-          "timeBeat": "100.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "me,",
-          "timeBeat": "100.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "I",
-          "timeBeat": "101.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "was",
-          "timeBeat": "101.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "in",
-          "timeBeat": "101.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "it",
-          "timeBeat": "101.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -2087,35 +2087,35 @@
       "annotations": [
         {
           "word": "I",
-          "timeBeat": "104.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "wave",
-          "timeBeat": "104.25"
+          "timeBeat": "0.25"
         },
         {
           "word": "goodbye",
-          "timeBeat": "104.5"
+          "timeBeat": "0.5"
         },
         {
           "word": "to",
-          "timeBeat": "104.75"
+          "timeBeat": "0.75"
         },
         {
           "word": "the",
-          "timeBeat": "105.0"
+          "timeBeat": "1.0"
         },
         {
           "word": "end",
-          "timeBeat": "105.25"
+          "timeBeat": "1.25"
         },
         {
           "word": "of",
-          "timeBeat": "105.5"
+          "timeBeat": "1.5"
         },
         {
           "word": "beginning",
-          "timeBeat": "105.75"
+          "timeBeat": "1.75"
         }
       ]
     },
@@ -2124,11 +2124,11 @@
       "annotations": [
         {
           "word": "(Goodbye,",
-          "timeBeat": "108.0"
+          "timeBeat": "0.0"
         },
         {
           "word": "goodbye)",
-          "timeBeat": "109.0"
+          "timeBeat": "1.0"
         }
       ]
     }

@@ -4,18 +4,27 @@ Turn your Rock Band guitar controller into a low-latency live musical instrument
 
 ## Overview
 
-mITyGuitar is a cross-platform desktop application (Windows/macOS/Linux) that connects to Rock Band guitar controllers via USB HID and transforms them into expressive MIDI instruments with chord mapping, SoundFont playback, and real-time audio synthesis.
+mITyGuitar is a cross-platform desktop application (Windows/macOS/Linux) that transforms Rock Band guitar controllers into expressive musical instruments. Play chords, trigger soundfonts, and perform with ultra-low latency audio synthesis.
+
+**🎵 Play along to songs, create chord progressions, or jam with genre-based patterns**
 
 ## Features
 
-- ⚡ **Ultra-low latency** audio engine (< 10ms)
-- 🎮 **Full controller support** - all buttons, axes, and sensors
-- 🎵 **SoundFont playback** - uses included guitar SoundFonts
-- 🎹 **Chord mapping** - trigger chords with fret combinations
-- 🎸 **Multiple genres** - Punk, Rock, EDM chord patterns
-- 🎛️ **Live visualization** - see all inputs in real-time
-- 💾 **Configuration** - persistent settings
-- 🧪 **Simulator mode** - test without hardware
+### 🎸 **Musical Performance**
+- 🎵 **Song Playback** - Play along to custom `.mitychart.json` songs with lyrics and chord changes
+- 🎹 **Chord Mapping** - Genre-based chord patterns (Punk, Rock, EDM, Pop, Folk, Metal)
+- 🎼 **SoundFont Integration** - High-quality guitar sounds from included SF2 files
+- 🎚️ **Live Effects** - Whammy bar, sustain, and genre-specific FX
+
+### 🎮 **Controller Support**
+- 🎯 **Full Hardware Support** - Rock Band guitars via USB HID
+- 🧪 **Simulator Mode** - Keyboard controls for development/testing
+- 🎛️ **Live Visualization** - Real-time input display and diagnostics
+
+### ⚡ **Performance**
+- ⚡ **Ultra-low Latency** - Sub-10ms audio engine
+- 💾 **Smart Configuration** - Persistent settings with hot-reload
+- 🔧 **Cross-Platform** - Windows, macOS, Linux support
 
 ## Quick Start
 
@@ -25,21 +34,98 @@ mITyGuitar is a cross-platform desktop application (Windows/macOS/Linux) that co
 - Node.js 18+ ([Install Node](https://nodejs.org/))
 - Rock Band guitar controller with USB dongle (or use simulator mode)
 
-### Building
+### Building & Running
 
+**Option 1: Using start.bat (Windows)**
+```cmd
+# Clone repository
+git clone <repository-url>
+cd guitar
+
+# Start with included batch file
+start.bat
+```
+
+**Option 2: Manual setup (All platforms)**
 ```powershell
 # Clone repository
 git clone <repository-url>
 cd guitar
 
-# Build Rust workspace
-cargo build --release
-
-# Setup desktop app (coming soon)
+# Install dependencies and run
 cd apps/desktop
 npm install
-npm run tauri dev
+npm run tauri:dev
 ```
+
+### First Launch
+
+1. **No hardware needed** - App starts in simulator mode
+2. **Play your first chord**: Hold `1` key + press `Space`
+3. **Browse songs**: Check [Song Library](assets/songs/README.md) for included songs
+4. **Change genres**: Try different chord patterns via menu or buttons
+
+> 📖 **New to mITyGuitar?** See [QUICKSTART.md](QUICKSTART.md) for a 5-minute guide
+
+## Song Library
+
+mITyGuitar includes a growing library of songs in `.mitychart.json` format:
+
+![Song Library Interface](docs/images/song-library.png)
+*Song library with included songs and upload functionality*
+
+### Playing Songs
+- **Upload**: Click "⬆ Upload Song" in Song Play view
+- **Browse**: Click "📁 Song Library" to see available songs
+- **Load**: Click "▶ Load" to start playing any song
+
+### Included Songs
+- **Greensleeves** - Traditional folk song
+- **Simple Blues** - 12-bar blues progression
+- **Djo - End Of Beginning** - Modern pop track
+
+### Song Format Example
+```json
+{
+  "meta": {
+    "title": "Song Title",
+    "artist": "Artist Name",
+    "youtube": "https://youtube.com/watch?v=...",
+    "spotify": "https://open.spotify.com/track/..."
+  },
+  "clock": {
+    "bpm": 120,
+    "timeSig": [4, 4],
+    "subdivision": "8n"
+  },
+  "mapping": {
+    "chords": {
+      "C": { "frets": ["GREEN", "RED"] },
+      "G": { "frets": ["YELLOW", "BLUE"] }
+    }
+  },
+  "lanes": [
+    {
+      "name": "Main",
+      "events": [
+        { "startBeat": 0, "dur": 1, "chord": "C" },
+        { "startBeat": 2, "dur": 1, "chord": "G" }
+      ]
+    }
+  ],
+  "lyrics": [
+    { "startBeat": 0, "annotations": [
+      { "word": "First", "timeBeat": "0.0" },
+      { "word": "line", "timeBeat": "0.5" }
+    ]}
+  ],
+  "sections": [
+    { "name": "Intro", "fromBeat": 0, "toBeat": 8 }
+  ]
+}
+```
+
+> 📝 **Creating Songs**: See [Song Format Guide](docs/SONG_FORMAT.md) for detailed documentation
 
 ## Controller Support
 
@@ -79,26 +165,38 @@ For development without hardware, use keyboard controls:
 
 ## Usage
 
-### Playing Chords
+### Playing Songs
 
-1. Hold one or more fret buttons
-2. Strum up or down
-3. Release frets between strums for different chords
+1. **Load a Song**: Song Play → 📁 Song Library → ▶ Load
+2. **Follow the Chart**: Green dots show when to strum
+3. **Watch Lyrics**: Follow word-by-word timing
+4. **Hit the Chords**: Fret combinations light up before each chord
 
-### Changing Instruments
+### Free Play Mode
 
-- **Menu**: Instruments → Next/Previous Instrument
-- **Shortcut**: D-pad Left/Right
+1. **Hold Frets**: Press 1-5 (Green to Orange) or Q-T (Solo)
+2. **Strum**: Space (down) or Arrow Up
+3. **Change Genre**: Menu → Chords → Genre → Rock/Punk/EDM
+4. **Switch Patterns**: Click "Next Pattern" button
 
-### Changing Chord Patterns
+### Controls
 
-- **Menu**: Chords → Next/Previous Pattern
-- **Genre**: Chords → Genre → Punk/Rock/EDM
+| Action | Keyboard | Controller |
+|--------|----------|------------|
+| Green Fret | 1, Q | Green button |
+| Red Fret | 2, W | Red button |
+| Yellow Fret | 3, E | Yellow button |
+| Blue Fret | 4, R | Blue button |
+| Orange Fret | 5, T | Orange button |
+| Strum Down | Space, ↓ | Strum down |
+| Strum Up | ↑ | Strum up |
+| Whammy | - | Whammy bar |
+| FX Switch | F1-F3 | FX toggle |
 
-### Panic (Stop All Sounds)
+### Panic (Emergency Stop)
 
 - **Menu**: File → Panic
-- **Button**: Click "Panic" button in Live View
+- **Button**: Click "🛑 Panic" in interface
 
 ## Configuration
 
@@ -258,36 +356,60 @@ cargo run
 
 ## Roadmap
 
+### ✅ Completed (Phase 1)
 - [x] Core Rust crates (controller, mapping, audio, config)
-- [x] Fallback synthesizer
-- [x] Chord patterns for 3 genres
-- [ ] Tauri desktop application
-- [ ] React UI with live visualization
-- [ ] SoundFont integration (sfizz)
-- [ ] Menu bar implementation
-- [ ] Diagnostics view
-- [ ] FX chain (distortion, cab sim)
-- [ ] Pattern editor
-- [ ] Production builds
+- [x] Tauri v2 desktop application with React UI
+- [x] SoundFont integration with 9 included SF2 files
+- [x] 6 genre system (Punk, Rock, EDM, Pop, Folk, Metal)
+- [x] Live visualization and diagnostics
+- [x] Song playback system with `.mitychart.json` format
+- [x] Chord mapping with sustain and whammy effects
+- [x] Cross-platform builds (Windows/macOS/Linux)
+
+### 🚧 In Progress (Phase 2)
+- [ ] Hardware controller integration (HID)
+- [ ] Controller mapping wizard
+- [ ] Song editor/creator tool
+- [ ] More SoundFont presets and effects
+
+### 🔮 Planned (Phase 3)
+- [ ] Online song sharing/library
+- [ ] Recording and playback
+- [ ] MIDI export
+- [ ] Plugin architecture for custom effects
+
+## Documentation
+
+📖 **User Guides**
+- [Quick Start](QUICKSTART.md) - Get running in 5 minutes
+- [Song Format](docs/SONG_FORMAT.md) - Create custom songs
+- [Controller Setup](docs/CONTROLLER_SETUP.md) - Hardware configuration
+
+🔧 **Technical Documentation**
+- [Architecture](docs/ARCHITECTURE.md) - System design overview
+- [SoundFont Integration](docs/SOUNDFONT_INTEGRATION.md) - Audio system details
+- [Chord Mapping](docs/CHORD_MAPPING.md) - Genre and pattern system
+- [Build Instructions](docs/BUILD.md) - Development setup
 
 ## Contributing
 
 Contributions welcome! Please:
 
-1. Follow Rust conventions
-2. Add tests for new features
-3. Keep audio code RT-safe
-4. Update documentation
+1. Follow Rust conventions and add tests
+2. Keep audio code RT-safe (no locks in audio callback)
+3. Update documentation for user-facing changes
+4. Test on multiple platforms when possible
 
 ## License
 
-[Add license information]
+MIT License - see [LICENSE](LICENSE) for details
 
 ## Credits
 
-- SoundFonts: [Add attribution for SF2 files]
-- Built with Rust, Tauri, React
+- **SoundFonts**: Various open-source SF2 files
+- **Built with**: Rust 🦀, Tauri, React, TypeScript
+- **Audio**: cpal, oxisynth for cross-platform low-latency audio
 
 ---
 
-**Made with ❤️ for guitar gamers who want to make real music!**
+**Made with ❤️ for guitar gamers who want to make real music!** 🎸🎮🎵

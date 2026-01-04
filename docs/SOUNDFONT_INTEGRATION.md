@@ -3,6 +3,9 @@
 ## Overview
 Implemented SoundFont support for mITyGuitar using the `oxisynth` library. The system can now load and use high-quality SoundFont 2 (SF2) instrument samples for realistic guitar sounds.
 
+![Audio Pipeline](images/audio-pipeline.png)
+*Audio processing pipeline from MIDI events to SoundFont synthesis*
+
 ## What Was Implemented
 
 ### 1. SoundFont Manager (`crates/audio/src/soundfont.rs`)
