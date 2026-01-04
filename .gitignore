@@ -45,3 +45,7 @@ yarn-error.log*
 # OS
 Thumbs.db
 .DS_Store
+
+# Soundfont files (except Electric_guitar.SF2)
+soundfont/*
+!soundfont/Electric_guitar.SF2
