@@ -20,7 +20,7 @@
     "allowUserOverrideInstrument": true
   },
   "clock": {
-    "bpm": 120,
+    "bpm": 80,
     "timeSig": [
       4,
       4
@@ -46,29 +46,24 @@
           "YELLOW"
         ]
       },
-      "C": {
+      "D": {
         "frets": [
           "BLUE"
         ]
       },
-      "D": {n
+      "Em": {
         "frets": [
           "ORANGE"
         ]
       },
-      "Em": {
+      "G": {
         "frets": [
           "GREEN"
         ]
       },
-      "G": {
-        "frets": [
-          "RED"
-        ]
-      },
       "Gmaj7": {
         "frets": [
-          "YELLOW"
+          "RED"
         ]
       }
     }
@@ -78,77 +73,127 @@
       "name": "Main",
       "events": [
         {
+          "startBeat": 4,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 4.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 5.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 5.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 6.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 6.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 7.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 7.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 8,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 8.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
           "startBeat": 9.0,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
           "startBeat": 9.5,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
           "startBeat": 10.0,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
           "startBeat": 10.5,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
           "startBeat": 11.0,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
           "startBeat": 11.5,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "Bm"
         },
         {
-          "startBeat": 12.0,
+          "startBeat": 12,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 12.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 13.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 13.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 14.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 14.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 15.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 15.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
-          "startBeat": 16.0,
+          "startBeat": 16,
           "dur": 0.5,
           "chord": "D"
         },
@@ -188,104 +233,104 @@
           "chord": "D"
         },
         {
-          "startBeat": 20.0,
+          "startBeat": 20,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
           "startBeat": 20.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
           "startBeat": 21.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
-          "startBeat": 21.25,
+          "startBeat": 21.5,
           "dur": 0.5,
           "chord": "Bm"
         },
         {
-          "startBeat": 21.75,
+          "startBeat": 22.0,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Em"
         },
         {
-          "startBeat": 22.25,
+          "startBeat": 22.5,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Em"
         },
         {
-          "startBeat": 22.75,
+          "startBeat": 23.0,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "Em"
         },
         {
-          "startBeat": 23.25,
+          "startBeat": 23.5,
           "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 23.75,
-          "dur": 0.5,
-          "chord": "A"
+          "chord": "Em"
         },
         {
           "startBeat": 24.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 24.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 25.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 25.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 26.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 26.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Gmaj7"
         },
         {
-          "startBeat": 27.0,
+          "startBeat": 26.75,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Em"
         },
         {
-          "startBeat": 27.5,
+          "startBeat": 27.25,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Em"
         },
         {
-          "startBeat": 28.0,
+          "startBeat": 27.75,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Em"
         },
         {
-          "startBeat": 28.5,
+          "startBeat": 28.25,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Em"
         },
         {
-          "startBeat": 29.0,
+          "startBeat": 28.75,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Em"
+        },
+        {
+          "startBeat": 29.25,
+          "dur": 0.5,
+          "chord": "A"
         },
         {
           "startBeat": 29.5,
@@ -315,90 +360,90 @@
         {
           "startBeat": 32.0,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "Bm"
         },
         {
-          "startBeat": 32.5,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 33.0,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 33.5,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 34.0,
+          "startBeat": 32.25,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 34.5,
+          "startBeat": 32.75,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 35.0,
+          "startBeat": 33.25,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "A"
         },
         {
-          "startBeat": 35.5,
+          "startBeat": 33.75,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "A"
         },
         {
-          "startBeat": 36.0,
+          "startBeat": 34.25,
           "dur": 0.5,
           "chord": "Gmaj7"
         },
         {
-          "startBeat": 36.5,
+          "startBeat": 34.75,
           "dur": 0.5,
-          "chord": "Gmaj7"
+          "chord": "A"
+        },
+        {
+          "startBeat": 35.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 35.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 36.25,
+          "dur": 0.5,
+          "chord": "A"
         },
         {
           "startBeat": 36.75,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "D"
         },
         {
           "startBeat": 37.25,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "D"
         },
         {
           "startBeat": 37.75,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "D"
         },
         {
-          "startBeat": 38.25,
+          "startBeat": 38.0,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "Gmaj7"
         },
         {
-          "startBeat": 38.75,
+          "startBeat": 38.5,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "Gmaj7"
         },
         {
-          "startBeat": 39.25,
+          "startBeat": 39.0,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 39.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
-          "startBeat": 40.0,
+          "startBeat": 40,
           "dur": 0.5,
           "chord": "D"
         },
@@ -418,84 +463,84 @@
           "chord": "D"
         },
         {
-          "startBeat": 42.0,
+          "startBeat": 41.75,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "G"
         },
         {
           "startBeat": 42.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 42.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 43.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 43.75,
           "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 44,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 44.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 45.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 45.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 46.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 46.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 47.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 47.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 48,
+          "dur": 0.5,
           "chord": "A"
-        },
-        {
-          "startBeat": 44.25,
-          "dur": 0.5,
-          "chord": "Gmaj7"
-        },
-        {
-          "startBeat": 44.75,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 45.25,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 45.75,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 46.25,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 46.75,
-          "dur": 0.5,
-          "chord": "D"
-        },
-        {
-          "startBeat": 47.25,
-          "dur": 0.5,
-          "chord": "D"
-        },
-        {
-          "startBeat": 47.75,
-          "dur": 0.5,
-          "chord": "D"
-        },
-        {
-          "startBeat": 48.0,
-          "dur": 0.5,
-          "chord": "D"
         },
         {
           "startBeat": 48.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 49.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
           "startBeat": 49.5,
@@ -505,122 +550,117 @@
         {
           "startBeat": 50.0,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "D"
         },
         {
           "startBeat": 50.5,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "D"
         },
         {
           "startBeat": 51.0,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "D"
         },
         {
           "startBeat": 51.5,
           "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 52.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 52.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 53.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 53.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 54.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 54.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 55.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 55.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 56.0,
+          "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 51.75,
+          "startBeat": 56.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
-          "startBeat": 52.25,
+          "startBeat": 57.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
-          "startBeat": 52.75,
+          "startBeat": 57.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
-          "startBeat": 53.25,
+          "startBeat": 58.0,
           "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 53.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 54.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 54.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 55.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 55.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 56.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 56.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 57.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 57.75,
-          "dur": 0.5,
-          "chord": "Bm"
-        },
-        {
-          "startBeat": 58.25,
-          "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 58.5,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 59.0,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 59.5,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 60.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
           "startBeat": 60.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
           "startBeat": 61.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "Bm"
         },
         {
           "startBeat": 61.5,
@@ -650,182 +690,187 @@
         {
           "startBeat": 64.0,
           "dur": 0.5,
-          "chord": "Em"
+          "chord": "Bm"
         },
         {
-          "startBeat": 64.5,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 65.0,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 65.5,
-          "dur": 0.5,
-          "chord": "Em"
-        },
-        {
-          "startBeat": 66.0,
+          "startBeat": 64.25,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 66.5,
+          "startBeat": 64.75,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 67.0,
+          "startBeat": 65.25,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 67.5,
+          "startBeat": 65.75,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 68.0,
+          "startBeat": 66.25,
           "dur": 0.5,
           "chord": "Gmaj7"
         },
         {
-          "startBeat": 68.5,
+          "startBeat": 66.75,
           "dur": 0.5,
-          "chord": "Gmaj7"
+          "chord": "A"
         },
         {
-          "startBeat": 69.0,
+          "startBeat": 67.25,
           "dur": 0.5,
-          "chord": "Gmaj7"
+          "chord": "A"
         },
         {
-          "startBeat": 69.5,
+          "startBeat": 67.75,
           "dur": 0.5,
-          "chord": "Gmaj7"
+          "chord": "A"
+        },
+        {
+          "startBeat": 68.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 68.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 69.25,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 69.75,
+          "dur": 0.5,
+          "chord": "D"
         },
         {
           "startBeat": 70.0,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 70.5,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 71.0,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "Gmaj7"
         },
         {
           "startBeat": 71.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
-          "startBeat": 72.0,
+          "startBeat": 72,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 72.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 73.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 73.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
-          "startBeat": 74.0,
+          "startBeat": 73.75,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "G"
         },
         {
           "startBeat": 74.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 74.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 75.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 75.75,
           "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 76,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 76.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 77.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 77.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 78.0,
+          "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 76.25,
-          "dur": 0.5,
-          "chord": "Gmaj7"
-        },
-        {
-          "startBeat": 76.75,
+          "startBeat": 78.5,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 77.25,
+          "startBeat": 79.0,
           "dur": 0.5,
           "chord": "A"
         },
         {
-          "startBeat": 77.75,
+          "startBeat": 79.5,
           "dur": 0.5,
           "chord": "A"
-        },
-        {
-          "startBeat": 78.25,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 78.75,
-          "dur": 0.5,
-          "chord": "D"
-        },
-        {
-          "startBeat": 79.25,
-          "dur": 0.5,
-          "chord": "D"
-        },
-        {
-          "startBeat": 79.75,
-          "dur": 0.5,
-          "chord": "D"
         },
         {
           "startBeat": 80.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 80.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 81.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 81.5,
@@ -853,49 +898,44 @@
           "chord": "A"
         },
         {
-          "startBeat": 83.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
           "startBeat": 84.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 84.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 85.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 85.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 86.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 86.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 87.0,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 87.5,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
           "startBeat": 88.0,
@@ -913,249 +953,249 @@
           "chord": "A"
         },
         {
-          "startBeat": 89.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 90.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 90.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 91.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 91.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 92.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 92.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 93.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 93.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 94.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 94.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 95.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 95.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 96.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 96.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 97.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 97.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 98.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 98.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 99.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 99.25,
+          "startBeat": 89.25,
           "dur": 0.5,
           "chord": "Bm"
         },
         {
-          "startBeat": 99.75,
+          "startBeat": 89.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 90.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 90.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 91.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 91.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 92.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 92.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 93.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 93.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 94.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 94.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 95.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 95.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 96.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 96.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 97.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 97.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 97.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 98.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 98.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 99.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 99.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 100.0,
           "dur": 0.5,
           "chord": "Bm"
         },
         {
           "startBeat": 100.25,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "A"
         },
         {
-          "startBeat": 100.5,
+          "startBeat": 100.75,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "A"
         },
         {
-          "startBeat": 101.0,
+          "startBeat": 101.25,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "A"
         },
         {
-          "startBeat": 101.5,
+          "startBeat": 101.75,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "A"
         },
         {
-          "startBeat": 102.0,
+          "startBeat": 102.25,
           "dur": 0.5,
-          "chord": "C"
+          "chord": "G"
         },
         {
-          "startBeat": 102.5,
+          "startBeat": 102.75,
           "dur": 0.5,
-          "chord": "C"
-        },
-        {
-          "startBeat": 103.0,
-          "dur": 0.5,
-          "chord": "C"
+          "chord": "A"
         },
         {
           "startBeat": 103.25,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "A"
         },
         {
           "startBeat": 103.75,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "A"
         },
         {
-          "startBeat": 104.0,
+          "startBeat": 104.25,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A"
         },
         {
-          "startBeat": 104.5,
+          "startBeat": 104.75,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "D"
         },
         {
-          "startBeat": 105.0,
+          "startBeat": 105.25,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A/F"
         },
         {
-          "startBeat": 105.5,
+          "startBeat": 105.75,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A/F"
         },
         {
-          "startBeat": 106.0,
+          "startBeat": 106.25,
           "dur": 0.5,
-          "chord": "G"
+          "chord": "A/F"
         },
         {
-          "startBeat": 106.5,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 107.0,
+          "startBeat": 106.75,
           "dur": 0.5,
           "chord": "G"
         },
         {
           "startBeat": 107.25,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "G"
         },
         {
           "startBeat": 107.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "A"
         },
         {
-          "startBeat": 108.0,
+          "startBeat": 108,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 108.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 109.0,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 109.5,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
-          "startBeat": 110.0,
+          "startBeat": 109.75,
           "dur": 0.5,
-          "chord": "Bm"
+          "chord": "G"
         },
         {
           "startBeat": 110.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 110.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 111.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 111.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 112.25,
@@ -1165,95 +1205,35 @@
         {
           "startBeat": 112.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 113.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 113.75,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 114.25,
           "dur": 0.5,
-          "chord": "A"
+          "chord": "G"
         },
         {
           "startBeat": 114.75,
           "dur": 0.5,
-          "chord": "D"
+          "chord": "G"
         },
         {
           "startBeat": 115.25,
           "dur": 0.5,
-          "chord": "A/F"
+          "chord": "G"
         },
         {
           "startBeat": 115.75,
-          "dur": 0.5,
-          "chord": "A/F"
-        },
-        {
-          "startBeat": 116.0,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 116.5,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 116.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 117.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 117.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 118.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 118.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 119.0,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 119.5,
-          "dur": 0.5,
-          "chord": "A"
-        },
-        {
-          "startBeat": 119.75,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 120.25,
-          "dur": 0.5,
-          "chord": "G"
-        },
-        {
-          "startBeat": 120.75,
           "dur": 0.5,
           "chord": "G"
         }

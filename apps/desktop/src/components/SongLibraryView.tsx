@@ -159,8 +159,33 @@ export default function SongLibraryView() {
     }
   };
 
+  const handleDeleteSong = async (filename: string, title: string) => {
+    // Prevent deleting default songs
+    if (filename === "greensleeves.mitychart.json" || filename === "simple-blues.mitychart.json") {
+      alert("Cannot delete default songs");
+      return;
+    }
+    
+    if (!confirm(`Delete "${title}"?`)) return;
+    
+    try {
+      await invoke("song_delete_from_library", { filename });
+      // If the deleted song was selected, clear it
+      if (selectedSong && selectedSong.meta.title === title) {
+        setSelectedSong(null);
+      }
+      await loadSongLibrary();
+    } catch (err) {
+      alert(`Failed to delete song: ${err}`);
+    }
+  };
+
   const openExternalLink = (url: string) => {
     openUrl(url).catch((err) => console.error("Failed to open URL:", err));
+  };
+
+  const isDefaultSong = (filename: string): boolean => {
+    return filename === "greensleeves.mitychart.json" || filename === "simple-blues.mitychart.json";
   };
 
   const getUniqueChords = (chart: SongChart): string[] => {
@@ -358,10 +383,26 @@ export default function SongLibraryView() {
                 className={`song-item ${
                   selectedSong?.meta.title === song.title ? "selected" : ""
                 }`}
-                onClick={() => handleSelectSong(song.filename)}
               >
-                <div className="song-item-title">{song.title}</div>
-                <div className="song-item-artist">{song.artist}</div>
+                <div 
+                  className="song-item-content"
+                  onClick={() => handleSelectSong(song.filename)}
+                >
+                  <div className="song-item-title">{song.title}</div>
+                  <div className="song-item-artist">{song.artist}</div>
+                </div>
+                {!isDefaultSong(song.filename) && (
+                  <button
+                    className="delete-song-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDeleteSong(song.filename, song.title);
+                    }}
+                    title="Delete song"
+                  >
+                    🗑
+                  </button>
+                )}
               </div>
             ))}
           </div>
