@@ -87,6 +87,7 @@ if ($Version -notmatch '^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?$') {
 
 Write-Host ""
 Write-Host "Preparing release v$Version..." -ForegroundColor Green
+Write-Host "Target platform: $Platform" -ForegroundColor Green
 Write-Host ""
 
 # Function to restore backup files
@@ -180,23 +181,19 @@ try {
     Write-Host "Building Tauri application for $Platform (this may take a while)..." -ForegroundColor Yellow
     Push-Location "apps\desktop"
     
-    # Determine build command based on platform
-    $buildCommand = "npm run tauri build"
+    # Platform-specific build messages
     if ($Platform -ne "all") {
         switch ($Platform) {
             "windows" { 
-                $buildCommand += " -- --target-platform windows"
                 Write-Host "Building Windows installers (MSI, NSIS)..." -ForegroundColor Cyan
             }
             "macos" { 
-                $buildCommand += " -- --target-platform macos"
                 Write-Host "Building macOS installers (DMG, APP)..." -ForegroundColor Cyan
                 if ($env:OS -eq "Windows_NT") {
                     Write-Host "Warning: Building for macOS from Windows may have limitations" -ForegroundColor Yellow
                 }
             }
             "linux" { 
-                $buildCommand += " -- --target-platform linux"
                 Write-Host "Building Linux installers (DEB, AppImage)..." -ForegroundColor Cyan
                 if ($env:OS -eq "Windows_NT") {
                     Write-Host "Warning: Building for Linux from Windows may have limitations" -ForegroundColor Yellow
@@ -207,25 +204,14 @@ try {
         Write-Host "Building for all supported platforms..." -ForegroundColor Cyan
     }
     
-    Invoke-Expression $buildCommand
+    # Execute build
+    npm run tauri build
     if ($LASTEXITCODE -ne 0) {
         Pop-Location
         Write-Host "ERROR: Tauri build failed!" -ForegroundColor Red
         Restore-BackupFiles
     }
     Pop-Location
-
-    # Display build artifacts
-    Write-Host ""
-    Write-Host "Build completed! Available artifacts:" -ForegroundColor Green
-    $bundlePath = "apps\desktop\src-tauri\target\release\bundle"
-    if (Test-Path $bundlePath) {
-        $artifacts = Get-ChildItem -Path $bundlePath -Recurse -File | Where-Object { $_.Extension -match '\.(msi|exe|dmg|app|deb|AppImage)$' }
-        foreach ($artifact in $artifacts) {
-            $relativePath = $artifact.FullName.Replace("$PWD\", "")
-            Write-Host "  📦 $relativePath" -ForegroundColor White
-        }
-    }
 
     Write-Host ""
     Write-Host "=================================================" -ForegroundColor Green
