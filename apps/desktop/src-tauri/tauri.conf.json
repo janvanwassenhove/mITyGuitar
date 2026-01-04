@@ -30,7 +30,6 @@
     "macOS": {
       "frameworks": [],
       "minimumSystemVersion": "",
-      "license": "",
       "useBootstrapper": false
     },
     "linux": {
