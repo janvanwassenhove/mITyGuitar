@@ -479,13 +479,7 @@ export default function SongLibraryView() {
                         key={index} 
                         className="lyric-line-container"
                       >
-                        <div
-                          className="lyric-line-wrapper"
-                          style={{
-                            marginLeft: `${line.timelinePosition}%`,
-                            width: `${line.width}%`
-                          }}
-                        >
+                        <div className="lyric-line-wrapper">
                           <div className="timeline-ruler-inline">
                             {line.lineMarkers.map((marker, markerIndex) => (
                               <div

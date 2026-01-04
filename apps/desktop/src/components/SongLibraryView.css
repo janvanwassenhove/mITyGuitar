@@ -427,7 +427,7 @@
   border-radius: 4px;
   white-space: nowrap;
   border: 1px solid rgba(59, 130, 246, 0.3);
-  transform: translateX(-25%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 
