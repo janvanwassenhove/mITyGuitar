@@ -1,0 +1,20 @@
+[package]
+name = "audio"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+cpal.workspace = true
+ringbuf.workspace = true
+log.workspace = true
+serde = { workspace = true, features = ["derive"] }
+oxisynth = { workspace = true, optional = true }
+fastrand = "2.0"
+mapping = { path = "../mapping" }
+controller = { path = "../controller" }
+
+[features]
+default = ["soundfont"]
+soundfont = ["oxisynth"]

@@ -1,0 +1,23 @@
+{
+  "name": "EDM",
+  "default_mode": "Minor",
+  "default_key": "A",
+  "role_to_chord_quality": {
+    "I": "minor",
+    "IV": "minor", 
+    "V": "sus2",
+    "bVII": "major",
+    "VI": "major"
+  },
+  "whammy_defaults": {
+    "enabled": true,
+    "pitch_bend_range_semitones": 3.0,
+    "vibrato_depth": 0.0,
+    "filter_cutoff_enabled": true,
+    "smoothing_factor": 0.6
+  },
+  "sustain_defaults": {
+    "enabled": true,
+    "release_time_ms": 750.0
+  }
+}

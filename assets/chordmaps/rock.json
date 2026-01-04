@@ -1,0 +1,23 @@
+{
+  "name": "Rock",
+  "default_mode": "Major",
+  "default_key": "A",
+  "role_to_chord_quality": {
+    "I": "major",
+    "IV": "major", 
+    "V": "major",
+    "bVII": "major",
+    "II": "minor"
+  },
+  "whammy_defaults": {
+    "enabled": true,
+    "pitch_bend_range_semitones": 2.0,
+    "vibrato_depth": 0.1,
+    "filter_cutoff_enabled": true,
+    "smoothing_factor": 0.7
+  },
+  "sustain_defaults": {
+    "enabled": true,
+    "release_time_ms": 600.0
+  }
+}

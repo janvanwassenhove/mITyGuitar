@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Greensleeves",
+    "artist": "Traditional (Public Domain)",
+    "notes": "Classic English folk song in 3/4 time",
+    "youtube": "https://www.youtube.com/watch?v=P5ItNxpwChE",
+    "spotify": "https://open.spotify.com/track/2jCnn096KePEuc0yGKOFqz"
+  },
+  "rights": {
+    "type": "public-domain"
+  },
+  "clock": {
+    "bpm": 90,
+    "timeSig": [3, 4],
+    "countInBars": 2,
+    "subdivision": "8n"
+  },
+  "playback": {
+    "autostart": false,
+    "startPaused": true,
+    "countInOnPlay": true,
+    "defaultInstrument": { "type": "soundfont", "label": "Acoustic Guitar" },
+    "fallbackInstrument": { "type": "virtual", "label": "Basic Guitar" },
+    "allowUserOverrideInstrument": true
+  },
+  "mapping": {
+    "chords": {
+      "Am": { "frets": ["GREEN"] },
+      "G": { "frets": ["RED"] },
+      "F": { "frets": ["YELLOW"] },
+      "E": { "frets": ["BLUE"] },
+      "C": { "frets": ["ORANGE"] }
+    }
+  },
+  "lanes": [
+    {
+      "name": "chords",
+      "events": [
+        { "startBeat": 0, "dur": 3, "chord": "Am", "section": "Intro" },
+        { "startBeat": 3, "dur": 3, "chord": "G", "section": "Intro" },
+        { "startBeat": 6, "dur": 3, "chord": "Am", "section": "Intro" },
+        { "startBeat": 9, "dur": 3, "chord": "E", "section": "Intro" },
+        
+        { "startBeat": 12, "dur": 3, "chord": "Am", "section": "Verse A" },
+        { "startBeat": 15, "dur": 3, "chord": "G", "section": "Verse A" },
+        { "startBeat": 18, "dur": 3, "chord": "Am", "section": "Verse A" },
+        { "startBeat": 21, "dur": 3, "chord": "E", "section": "Verse A" },
+        { "startBeat": 24, "dur": 3, "chord": "Am", "section": "Verse A" },
+        { "startBeat": 27, "dur": 3, "chord": "G", "section": "Verse A" },
+        { "startBeat": 30, "dur": 3, "chord": "Am", "section": "Verse A" },
+        { "startBeat": 33, "dur": 3, "chord": "E", "section": "Verse A" },
+        
+        { "startBeat": 36, "dur": 3, "chord": "C", "section": "Verse B" },
+        { "startBeat": 39, "dur": 3, "chord": "G", "section": "Verse B" },
+        { "startBeat": 42, "dur": 3, "chord": "Am", "section": "Verse B" },
+        { "startBeat": 45, "dur": 3, "chord": "E", "section": "Verse B" },
+        { "startBeat": 48, "dur": 3, "chord": "C", "section": "Verse B" },
+        { "startBeat": 51, "dur": 3, "chord": "G", "section": "Verse B" },
+        { "startBeat": 54, "dur": 3, "chord": "Am", "section": "Verse B" },
+        { "startBeat": 57, "dur": 3, "chord": "E", "section": "Verse B" },
+        
+        { "startBeat": 60, "dur": 3, "chord": "Am", "section": "Outro" },
+        { "startBeat": 63, "dur": 3, "chord": "G", "section": "Outro" },
+        { "startBeat": 66, "dur": 3, "chord": "Am", "section": "Outro" },
+        { "startBeat": 69, "dur": 3, "chord": "Am", "section": "Outro" }
+      ]
+    }
+  ],
+  "lyrics": [
+    { "startBeat": 0, "annotations": [
+      { "word": "♪", "timeBeat": "0.0" },
+      { "word": "Instrumental", "timeBeat": "1.0" },
+      { "word": "intro", "timeBeat": "5.0" },
+      { "word": "♪", "timeBeat": "8.0" }
+    ]},
+    { "startBeat": 12, "annotations": [
+      { "word": "Alas,", "timeBeat": "12.0" },
+      { "word": "my", "timeBeat": "13.5" },
+      { "word": "love,", "timeBeat": "15.0" },
+      { "word": "you", "timeBeat": "16.5" },
+      { "word": "do", "timeBeat": "18.0" },
+      { "word": "me", "timeBeat": "19.5" },
+      { "word": "wrong", "timeBeat": "21.0" }
+    ]},
+    { "startBeat": 24, "annotations": [
+      { "word": "To", "timeBeat": "24.0" },
+      { "word": "cast", "timeBeat": "25.5" },
+      { "word": "me", "timeBeat": "27.0" },
+      { "word": "off", "timeBeat": "28.5" },
+      { "word": "discourteously", "timeBeat": "30.0" }
+    ]},
+    { "startBeat": 36, "annotations": [
+      { "word": "For", "timeBeat": "36.0" },
+      { "word": "I", "timeBeat": "37.5" },
+      { "word": "have", "timeBeat": "39.0" },
+      { "word": "loved", "timeBeat": "40.5" },
+      { "word": "you", "timeBeat": "42.0" },
+      { "word": "oh", "timeBeat": "43.5" },
+      { "word": "so", "timeBeat": "44.0" },
+      { "word": "long", "timeBeat": "45.0" }
+    ]},
+    { "startBeat": 48, "annotations": [
+      { "word": "Delighting", "timeBeat": "48.0" },
+      { "word": "in", "timeBeat": "51.0" },
+      { "word": "your", "timeBeat": "52.5" },
+      { "word": "company", "timeBeat": "54.0" }
+    ]},
+    { "startBeat": 60, "annotations": [
+      { "word": "♪", "timeBeat": "60.0" },
+      { "word": "Greensleeves", "timeBeat": "63.0" },
+      { "word": "♪", "timeBeat": "66.0" }
+    ]}
+  ],
+  "sections": [
+    { "name": "Count-in", "fromBeat": -6, "toBeat": 0 },
+    { "name": "Intro", "fromBeat": 0, "toBeat": 12 },
+    { "name": "Verse A", "fromBeat": 12, "toBeat": 36 },
+    { "name": "Verse B", "fromBeat": 36, "toBeat": 60 },
+    { "name": "Outro", "fromBeat": 60, "toBeat": 72 }
+  ],
+  "timing_assumptions": {
+    "method": "grid",
+    "rule": "one bar (3 beats) per chord",
+    "feel": "Waltz (3/4 time)"
+  }
+}

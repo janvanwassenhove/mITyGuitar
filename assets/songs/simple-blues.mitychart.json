@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Simple Blues",
+    "artist": "Traditional (Public Domain)",
+    "youtube": "https://www.youtube.com/watch?v=RP3r38R3dkA"
+  },
+  "clock": {
+    "bpm": 100,
+    "timeSig": [4, 4],
+    "countInBars": 2,
+    "subdivision": "8n"
+  },
+  "playback": {
+    "autostart": false,
+    "startPaused": true,
+    "countInOnPlay": true,
+    "defaultInstrument": { "type": "soundfont", "label": "Acoustic Guitar" },
+    "fallbackInstrument": { "type": "virtual", "label": "Basic Guitar" },
+    "allowUserOverrideInstrument": true
+  },
+  "mapping": {
+    "chords": {
+      "E": { "frets": ["GREEN"] },
+      "A": { "frets": ["RED"] },
+      "B7": { "frets": ["YELLOW"] }
+    }
+  },
+  "lanes": [
+    {
+      "name": "Main",
+      "events": [
+        { "startBeat": 0, "dur": 4, "chord": "E", "section": "Intro" },
+        { "startBeat": 4, "dur": 4, "chord": "E", "section": "Intro" },
+        { "startBeat": 8, "dur": 4, "chord": "A", "section": "Verse 1" },
+        { "startBeat": 12, "dur": 4, "chord": "E", "section": "Verse 1" },
+        { "startBeat": 16, "dur": 2, "chord": "B7", "section": "Verse 1" },
+        { "startBeat": 18, "dur": 2, "chord": "A", "section": "Verse 1" },
+        { "startBeat": 20, "dur": 4, "chord": "E", "section": "Verse 1" },
+        { "startBeat": 24, "dur": 4, "chord": "A", "section": "Verse 2" },
+        { "startBeat": 28, "dur": 4, "chord": "E", "section": "Verse 2" },
+        { "startBeat": 32, "dur": 2, "chord": "B7", "section": "Verse 2" },
+        { "startBeat": 34, "dur": 2, "chord": "A", "section": "Verse 2" },
+        { "startBeat": 36, "dur": 4, "chord": "E", "section": "Outro" },
+        { "startBeat": 40, "dur": 4, "chord": "E", "section": "Outro" }
+      ]
+    }
+  ],
+  "lyrics": [
+    { "startBeat": 0, "annotations": [
+      { "word": "♪", "timeBeat": "0.0" },
+      { "word": "Instrumental", "timeBeat": "2.0" },
+      { "word": "intro", "timeBeat": "5.0" },
+      { "word": "♪", "timeBeat": "7.0" }
+    ]},
+    { "startBeat": 8, "annotations": [
+      { "word": "Simple", "timeBeat": "8.0" },
+      { "word": "three-chord", "timeBeat": "9.5" },
+      { "word": "blues", "timeBeat": "11.0" }
+    ]},
+    { "startBeat": 12, "annotations": [
+      { "word": "Easy", "timeBeat": "12.0" },
+      { "word": "to", "timeBeat": "13.0" },
+      { "word": "play", "timeBeat": "13.5" },
+      { "word": "through", "timeBeat": "14.5" }
+    ]},
+    { "startBeat": 16, "annotations": [
+      { "word": "Perfect", "timeBeat": "16.0" },
+      { "word": "for", "timeBeat": "17.0" },
+      { "word": "practice", "timeBeat": "17.5" }
+    ]},
+    { "startBeat": 20, "annotations": [
+      { "word": "Getting", "timeBeat": "20.0" },
+      { "word": "better", "timeBeat": "21.0" },
+      { "word": "at", "timeBeat": "22.0" },
+      { "word": "this!", "timeBeat": "22.5" }
+    ]},
+    { "startBeat": 24, "annotations": [
+      { "word": "Feel", "timeBeat": "24.0" },
+      { "word": "the", "timeBeat": "25.0" },
+      { "word": "rhythm", "timeBeat": "25.5" },
+      { "word": "flow", "timeBeat": "27.0" }
+    ]},
+    { "startBeat": 28, "annotations": [
+      { "word": "Keep", "timeBeat": "28.0" },
+      { "word": "that", "timeBeat": "29.0" },
+      { "word": "steady", "timeBeat": "29.5" },
+      { "word": "tempo", "timeBeat": "31.0" }
+    ]},
+    { "startBeat": 32, "annotations": [
+      { "word": "Almost", "timeBeat": "32.0" },
+      { "word": "at", "timeBeat": "33.0" },
+      { "word": "the", "timeBeat": "33.5" },
+      { "word": "end", "timeBeat": "34.0" },
+      { "word": "now", "timeBeat": "34.5" }
+    ]},
+    { "startBeat": 36, "annotations": [
+      { "word": "♪", "timeBeat": "36.0" },
+      { "word": "Outro", "timeBeat": "38.0" },
+      { "word": "♪", "timeBeat": "40.0" }
+    ]}
+  ],
+  "sections": [
+    { "name": "Intro", "fromBeat": 0, "toBeat": 8 },
+    { "name": "Verse 1", "fromBeat": 8, "toBeat": 24 },
+    { "name": "Verse 2", "fromBeat": 24, "toBeat": 36 },
+    { "name": "Outro", "fromBeat": 36, "toBeat": 44 }
+  ]
+}

@@ -1,0 +1,2193 @@
+{
+  "meta": {
+    "title": "End Of Beginning",
+    "artist": "Djo",
+    "youtube": "https://youtu.be/xy3AcmW0lrQ",
+    "spotify": "https://open.spotify.com/track/6ZWIIawlXC4O3z9yEuJvDo"
+  },
+  "playback": {
+    "autostart": false,
+    "startPaused": true,
+    "countInOnPlay": true,
+    "defaultInstrument": {
+      "type": "soundfont",
+      "label": "Clean Guitar"
+    },
+    "fallbackInstrument": {
+      "type": "virtual",
+      "label": "Basic Guitar"
+    },
+    "allowUserOverrideInstrument": true
+  },
+  "clock": {
+    "bpm": 120,
+    "timeSig": [
+      4,
+      4
+    ],
+    "countInBars": 2,
+    "subdivision": "8n",
+    "key": "D"
+  },
+  "mapping": {
+    "chords": {
+      "A": {
+        "frets": [
+          "GREEN"
+        ]
+      },
+      "A/F": {
+        "frets": [
+          "RED"
+        ]
+      },
+      "Bm": {
+        "frets": [
+          "YELLOW"
+        ]
+      },
+      "C": {
+        "frets": [
+          "BLUE"
+        ]
+      },
+      "D": {
+        "frets": [
+          "ORANGE"
+        ]
+      },
+      "Em": {
+        "frets": [
+          "GREEN"
+        ]
+      },
+      "G": {
+        "frets": [
+          "RED"
+        ]
+      },
+      "Gmaj7": {
+        "frets": [
+          "YELLOW"
+        ]
+      }
+    }
+  },
+  "lanes": [
+    {
+      "name": "Main",
+      "events": [
+        {
+          "startBeat": 9.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 9.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 10.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 10.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 11.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 11.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 12.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 12.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 13.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 13.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 14.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 14.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 15.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 15.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 16.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 16.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 17.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 17.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 18.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 18.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 19.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 19.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 20.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 20.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 21.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 21.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 21.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 22.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 22.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 23.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 23.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 24.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 24.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 25.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 25.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 26.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 26.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 27.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 27.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 28.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 28.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 29.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 29.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 30.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 30.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 31.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 31.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 32.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 32.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 33.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 33.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 34.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 34.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 35.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 35.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 36.0,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 36.5,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 36.75,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 37.25,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 37.75,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 38.25,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 38.75,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 39.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 39.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 40.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 40.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 41.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 41.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 42.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 42.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 42.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 43.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 43.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 44.25,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 44.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 45.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 45.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 46.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 46.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 47.25,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 47.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 48.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 48.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 49.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 49.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 50.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 50.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 51.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 51.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 51.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 52.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 52.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 53.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 53.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 54.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 54.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 55.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 55.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 56.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 56.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 57.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 57.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 58.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 58.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 59.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 59.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 60.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 60.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 61.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 61.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 62.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 62.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 63.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 63.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 64.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 64.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 65.0,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 65.5,
+          "dur": 0.5,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 66.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 66.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 67.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 67.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 68.0,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 68.5,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 69.0,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 69.5,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 70.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 70.5,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 71.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 71.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 72.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 72.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 73.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 73.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 74.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 74.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 74.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 75.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 75.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 76.25,
+          "dur": 0.5,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 76.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 77.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 77.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 78.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 78.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 79.25,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 79.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 80.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 80.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 81.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 81.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 82.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 82.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 83.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 83.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 83.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 84.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 84.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 85.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 85.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 86.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 86.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 87.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 87.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 88.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 88.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 89.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 89.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 90.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 90.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 91.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 91.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 92.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 92.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 93.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 93.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 94.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 94.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 95.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 95.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 96.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 96.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 97.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 97.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 98.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 98.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 99.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 99.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 99.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 100.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 100.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 101.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 101.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 102.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 102.5,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 103.0,
+          "dur": 0.5,
+          "chord": "C"
+        },
+        {
+          "startBeat": 103.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 103.75,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 104.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 104.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 105.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 105.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 106.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 106.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 107.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 107.25,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 107.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 108.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 108.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 109.0,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 109.5,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 110.0,
+          "dur": 0.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 110.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 110.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 111.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 111.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 112.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 112.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 113.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 113.75,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 114.25,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 114.75,
+          "dur": 0.5,
+          "chord": "D"
+        },
+        {
+          "startBeat": 115.25,
+          "dur": 0.5,
+          "chord": "A/F"
+        },
+        {
+          "startBeat": 115.75,
+          "dur": 0.5,
+          "chord": "A/F"
+        },
+        {
+          "startBeat": 116.0,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 116.5,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 116.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 117.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 117.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 118.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 118.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 119.0,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 119.5,
+          "dur": 0.5,
+          "chord": "A"
+        },
+        {
+          "startBeat": 119.75,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 120.25,
+          "dur": 0.5,
+          "chord": "G"
+        },
+        {
+          "startBeat": 120.75,
+          "dur": 0.5,
+          "chord": "G"
+        }
+      ]
+    }
+  ],
+  "lyrics": [
+    {
+      "startBeat": 4,
+      "annotations": [
+        {
+          "word": "Just",
+          "timeBeat": "4.0"
+        },
+        {
+          "word": "one",
+          "timeBeat": "4.33"
+        },
+        {
+          "word": "more",
+          "timeBeat": "4.67"
+        },
+        {
+          "word": "tear",
+          "timeBeat": "5.0"
+        },
+        {
+          "word": "to",
+          "timeBeat": "5.33"
+        },
+        {
+          "word": "cry",
+          "timeBeat": "5.67"
+        }
+      ]
+    },
+    {
+      "startBeat": 8,
+      "annotations": [
+        {
+          "word": "One",
+          "timeBeat": "8.0"
+        },
+        {
+          "word": "teardrop",
+          "timeBeat": "8.4"
+        },
+        {
+          "word": "from",
+          "timeBeat": "8.8"
+        },
+        {
+          "word": "my",
+          "timeBeat": "9.2"
+        },
+        {
+          "word": "eye",
+          "timeBeat": "9.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 12,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": "12.0"
+        },
+        {
+          "word": "better",
+          "timeBeat": "12.4"
+        },
+        {
+          "word": "save",
+          "timeBeat": "12.8"
+        },
+        {
+          "word": "it",
+          "timeBeat": "13.2"
+        },
+        {
+          "word": "for",
+          "timeBeat": "13.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 16,
+      "annotations": [
+        {
+          "word": "The",
+          "timeBeat": "16.0"
+        },
+        {
+          "word": "middle",
+          "timeBeat": "16.4"
+        },
+        {
+          "word": "of",
+          "timeBeat": "16.8"
+        },
+        {
+          "word": "the",
+          "timeBeat": "17.2"
+        },
+        {
+          "word": "night",
+          "timeBeat": "17.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 20,
+      "annotations": [
+        {
+          "word": "When",
+          "timeBeat": "20.0"
+        },
+        {
+          "word": "things",
+          "timeBeat": "20.5"
+        },
+        {
+          "word": "aren't",
+          "timeBeat": "21.0"
+        },
+        {
+          "word": "black-and-white",
+          "timeBeat": "21.5"
+        }
+      ]
+    },
+    {
+      "startBeat": 24,
+      "annotations": [
+        {
+          "word": "Enter,",
+          "timeBeat": "24.0"
+        },
+        {
+          "word": "Troubadour:'Remember",
+          "timeBeat": "24.67"
+        },
+        {
+          "word": "24?'",
+          "timeBeat": "25.33"
+        }
+      ]
+    },
+    {
+      "startBeat": 28,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": "28.0"
+        },
+        {
+          "word": "when",
+          "timeBeat": "28.22"
+        },
+        {
+          "word": "I'm",
+          "timeBeat": "28.44"
+        },
+        {
+          "word": "back",
+          "timeBeat": "28.67"
+        },
+        {
+          "word": "in",
+          "timeBeat": "28.89"
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": "29.11"
+        },
+        {
+          "word": "I",
+          "timeBeat": "29.33"
+        },
+        {
+          "word": "feel",
+          "timeBeat": "29.56"
+        },
+        {
+          "word": "it",
+          "timeBeat": "29.78"
+        }
+      ]
+    },
+    {
+      "startBeat": 32,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": "32.0"
+        },
+        {
+          "word": "version",
+          "timeBeat": "32.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "32.5"
+        },
+        {
+          "word": "me,",
+          "timeBeat": "32.75"
+        },
+        {
+          "word": "I",
+          "timeBeat": "33.0"
+        },
+        {
+          "word": "was",
+          "timeBeat": "33.25"
+        },
+        {
+          "word": "in",
+          "timeBeat": "33.5"
+        },
+        {
+          "word": "it",
+          "timeBeat": "33.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 36,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": "36.0"
+        },
+        {
+          "word": "wave",
+          "timeBeat": "36.25"
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": "36.5"
+        },
+        {
+          "word": "to",
+          "timeBeat": "36.75"
+        },
+        {
+          "word": "the",
+          "timeBeat": "37.0"
+        },
+        {
+          "word": "end",
+          "timeBeat": "37.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "37.5"
+        },
+        {
+          "word": "beginning",
+          "timeBeat": "37.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 40,
+      "annotations": [
+        {
+          "word": "This",
+          "timeBeat": "40.0"
+        },
+        {
+          "word": "song",
+          "timeBeat": "40.4"
+        },
+        {
+          "word": "has",
+          "timeBeat": "40.8"
+        },
+        {
+          "word": "started",
+          "timeBeat": "41.2"
+        },
+        {
+          "word": "now",
+          "timeBeat": "41.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 44,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": "44.0"
+        },
+        {
+          "word": "you're",
+          "timeBeat": "44.4"
+        },
+        {
+          "word": "just",
+          "timeBeat": "44.8"
+        },
+        {
+          "word": "finding",
+          "timeBeat": "45.2"
+        },
+        {
+          "word": "out",
+          "timeBeat": "45.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 48,
+      "annotations": [
+        {
+          "word": "Now",
+          "timeBeat": "48.0"
+        },
+        {
+          "word": "isn't",
+          "timeBeat": "48.4"
+        },
+        {
+          "word": "that",
+          "timeBeat": "48.8"
+        },
+        {
+          "word": "a",
+          "timeBeat": "49.2"
+        },
+        {
+          "word": "laugh?",
+          "timeBeat": "49.6"
+        }
+      ]
+    },
+    {
+      "startBeat": 52,
+      "annotations": [
+        {
+          "word": "A",
+          "timeBeat": "52.0"
+        },
+        {
+          "word": "major",
+          "timeBeat": "52.25"
+        },
+        {
+          "word": "sacrifice,",
+          "timeBeat": "52.5"
+        },
+        {
+          "word": "but",
+          "timeBeat": "52.75"
+        },
+        {
+          "word": "clueless",
+          "timeBeat": "53.0"
+        },
+        {
+          "word": "at",
+          "timeBeat": "53.25"
+        },
+        {
+          "word": "the",
+          "timeBeat": "53.5"
+        },
+        {
+          "word": "time",
+          "timeBeat": "53.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 56,
+      "annotations": [
+        {
+          "word": "Enter,",
+          "timeBeat": "56.0"
+        },
+        {
+          "word": "Caroline:",
+          "timeBeat": "56.25"
+        },
+        {
+          "word": "\"Just",
+          "timeBeat": "56.5"
+        },
+        {
+          "word": "trust",
+          "timeBeat": "56.75"
+        },
+        {
+          "word": "me,",
+          "timeBeat": "57.0"
+        },
+        {
+          "word": "you'll",
+          "timeBeat": "57.25"
+        },
+        {
+          "word": "be",
+          "timeBeat": "57.5"
+        },
+        {
+          "word": "fine\"",
+          "timeBeat": "57.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 60,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": "60.0"
+        },
+        {
+          "word": "when",
+          "timeBeat": "60.22"
+        },
+        {
+          "word": "I'm",
+          "timeBeat": "60.44"
+        },
+        {
+          "word": "back",
+          "timeBeat": "60.67"
+        },
+        {
+          "word": "in",
+          "timeBeat": "60.89"
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": "61.11"
+        },
+        {
+          "word": "I",
+          "timeBeat": "61.33"
+        },
+        {
+          "word": "feel",
+          "timeBeat": "61.56"
+        },
+        {
+          "word": "it",
+          "timeBeat": "61.78"
+        }
+      ]
+    },
+    {
+      "startBeat": 64,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": "64.0"
+        },
+        {
+          "word": "version",
+          "timeBeat": "64.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "64.5"
+        },
+        {
+          "word": "me,",
+          "timeBeat": "64.75"
+        },
+        {
+          "word": "I",
+          "timeBeat": "65.0"
+        },
+        {
+          "word": "was",
+          "timeBeat": "65.25"
+        },
+        {
+          "word": "in",
+          "timeBeat": "65.5"
+        },
+        {
+          "word": "it",
+          "timeBeat": "65.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 68,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": "68.0"
+        },
+        {
+          "word": "wave",
+          "timeBeat": "68.25"
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": "68.5"
+        },
+        {
+          "word": "to",
+          "timeBeat": "68.75"
+        },
+        {
+          "word": "the",
+          "timeBeat": "69.0"
+        },
+        {
+          "word": "end",
+          "timeBeat": "69.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "69.5"
+        },
+        {
+          "word": "beginning",
+          "timeBeat": "69.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 72,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": "72.0"
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": "73.0"
+        }
+      ]
+    },
+    {
+      "startBeat": 76,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": "76.0"
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": "77.0"
+        }
+      ]
+    },
+    {
+      "startBeat": 80,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": "80.0"
+        },
+        {
+          "word": "take",
+          "timeBeat": "80.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "80.29"
+        },
+        {
+          "word": "man",
+          "timeBeat": "80.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "80.57"
+        },
+        {
+          "word": "of",
+          "timeBeat": "80.71"
+        },
+        {
+          "word": "the",
+          "timeBeat": "80.86"
+        },
+        {
+          "word": "city,",
+          "timeBeat": "81.0"
+        },
+        {
+          "word": "not",
+          "timeBeat": "81.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "81.29"
+        },
+        {
+          "word": "city",
+          "timeBeat": "81.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "81.57"
+        },
+        {
+          "word": "the",
+          "timeBeat": "81.71"
+        },
+        {
+          "word": "man",
+          "timeBeat": "81.86"
+        }
+      ]
+    },
+    {
+      "startBeat": 84,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": "84.0"
+        },
+        {
+          "word": "take",
+          "timeBeat": "84.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "84.29"
+        },
+        {
+          "word": "man",
+          "timeBeat": "84.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "84.57"
+        },
+        {
+          "word": "of",
+          "timeBeat": "84.71"
+        },
+        {
+          "word": "the",
+          "timeBeat": "84.86"
+        },
+        {
+          "word": "city,",
+          "timeBeat": "85.0"
+        },
+        {
+          "word": "not",
+          "timeBeat": "85.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "85.29"
+        },
+        {
+          "word": "city",
+          "timeBeat": "85.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "85.57"
+        },
+        {
+          "word": "the",
+          "timeBeat": "85.71"
+        },
+        {
+          "word": "man",
+          "timeBeat": "85.86"
+        }
+      ]
+    },
+    {
+      "startBeat": 88,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": "88.0"
+        },
+        {
+          "word": "take",
+          "timeBeat": "88.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "88.29"
+        },
+        {
+          "word": "man",
+          "timeBeat": "88.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "88.57"
+        },
+        {
+          "word": "of",
+          "timeBeat": "88.71"
+        },
+        {
+          "word": "the",
+          "timeBeat": "88.86"
+        },
+        {
+          "word": "city,",
+          "timeBeat": "89.0"
+        },
+        {
+          "word": "not",
+          "timeBeat": "89.14"
+        },
+        {
+          "word": "the",
+          "timeBeat": "89.29"
+        },
+        {
+          "word": "city",
+          "timeBeat": "89.43"
+        },
+        {
+          "word": "out",
+          "timeBeat": "89.57"
+        },
+        {
+          "word": "the",
+          "timeBeat": "89.71"
+        },
+        {
+          "word": "man",
+          "timeBeat": "89.86"
+        }
+      ]
+    },
+    {
+      "startBeat": 92,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": "92.0"
+        },
+        {
+          "word": "take",
+          "timeBeat": "92.29"
+        },
+        {
+          "word": "the",
+          "timeBeat": "92.57"
+        },
+        {
+          "word": "man",
+          "timeBeat": "92.86"
+        },
+        {
+          "word": "out",
+          "timeBeat": "93.14"
+        },
+        {
+          "word": "of",
+          "timeBeat": "93.43"
+        },
+        {
+          "word": "the",
+          "timeBeat": "93.71"
+        }
+      ]
+    },
+    {
+      "startBeat": 96,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": "96.0"
+        },
+        {
+          "word": "when",
+          "timeBeat": "96.22"
+        },
+        {
+          "word": "I'm",
+          "timeBeat": "96.44"
+        },
+        {
+          "word": "back",
+          "timeBeat": "96.67"
+        },
+        {
+          "word": "in",
+          "timeBeat": "96.89"
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": "97.11"
+        },
+        {
+          "word": "I",
+          "timeBeat": "97.33"
+        },
+        {
+          "word": "feel",
+          "timeBeat": "97.56"
+        },
+        {
+          "word": "it",
+          "timeBeat": "97.78"
+        }
+      ]
+    },
+    {
+      "startBeat": 100,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": "100.0"
+        },
+        {
+          "word": "version",
+          "timeBeat": "100.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "100.5"
+        },
+        {
+          "word": "me,",
+          "timeBeat": "100.75"
+        },
+        {
+          "word": "I",
+          "timeBeat": "101.0"
+        },
+        {
+          "word": "was",
+          "timeBeat": "101.25"
+        },
+        {
+          "word": "in",
+          "timeBeat": "101.5"
+        },
+        {
+          "word": "it",
+          "timeBeat": "101.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 104,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": "104.0"
+        },
+        {
+          "word": "wave",
+          "timeBeat": "104.25"
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": "104.5"
+        },
+        {
+          "word": "to",
+          "timeBeat": "104.75"
+        },
+        {
+          "word": "the",
+          "timeBeat": "105.0"
+        },
+        {
+          "word": "end",
+          "timeBeat": "105.25"
+        },
+        {
+          "word": "of",
+          "timeBeat": "105.5"
+        },
+        {
+          "word": "beginning",
+          "timeBeat": "105.75"
+        }
+      ]
+    },
+    {
+      "startBeat": 108,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": "108.0"
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": "109.0"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "Intro",
+      "fromBeat": 0,
+      "toBeat": 2
+    },
+    {
+      "name": "Verse 1",
+      "fromBeat": 2,
+      "toBeat": 26
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 26,
+      "toBeat": 38
+    },
+    {
+      "name": "Verse 2",
+      "fromBeat": 38,
+      "toBeat": 58
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 58,
+      "toBeat": 78
+    },
+    {
+      "name": "Bridge",
+      "fromBeat": 78,
+      "toBeat": 94
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 94,
+      "toBeat": 110
+    }
+  ]
+}

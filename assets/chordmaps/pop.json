@@ -1,0 +1,23 @@
+{
+  "name": "Pop",
+  "default_mode": "Major",
+  "default_key": "C",
+  "role_to_chord_quality": {
+    "I": "add9",
+    "IV": "add9", 
+    "V": "sus4",
+    "bVII": "major",
+    "VI": "minor"
+  },
+  "whammy_defaults": {
+    "enabled": true,
+    "pitch_bend_range_semitones": 0.5,
+    "vibrato_depth": 0.05,
+    "filter_cutoff_enabled": false,
+    "smoothing_factor": 0.9
+  },
+  "sustain_defaults": {
+    "enabled": true,
+    "release_time_ms": 400.0
+  }
+}

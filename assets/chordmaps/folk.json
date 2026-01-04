@@ -1,0 +1,23 @@
+{
+  "name": "Folk",
+  "default_mode": "Major",
+  "default_key": "G",
+  "role_to_chord_quality": {
+    "I": "major",
+    "IV": "major", 
+    "V": "sus4",
+    "bVII": "major",
+    "VI": "minor"
+  },
+  "whammy_defaults": {
+    "enabled": true,
+    "pitch_bend_range_semitones": 0.3,
+    "vibrato_depth": 0.2,
+    "filter_cutoff_enabled": false,
+    "smoothing_factor": 0.85
+  },
+  "sustain_defaults": {
+    "enabled": true,
+    "release_time_ms": 800.0
+  }
+}

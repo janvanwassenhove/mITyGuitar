@@ -1,0 +1,155 @@
+/* Fret Button Styles */
+.fret-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.fret-button.main {
+  /* No background or border */
+}
+
+.fret-button.solo {
+  transform: scale(0.9);
+}
+
+.fret-button:hover {
+  /* Remove hover background */
+}
+
+.fret-button.pressed {
+  /* Remove pressed background */
+}
+
+.fret-button.solo.pressed {
+  transform: scale(0.9);
+}
+
+.fret-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--fret-color);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.fret-circle:hover {
+  border-width: 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.fret-button.pressed .fret-circle {
+  background: var(--fret-color);
+  box-shadow: 0 0 20px var(--fret-color);
+  transform: scale(1.05);
+}
+
+.fret-button.pressed .chord-label {
+  color: #000;
+  font-weight: 700;
+}
+
+.fret-button.solo .fret-circle {
+  width: 52px;
+  height: 52px;
+  border-width: 2px;
+}
+
+.chord-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  user-select: none;
+}
+
+.fret-button.solo .chord-label {
+  font-size: 14px;
+}
+
+.chord-edit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chord-edit-select {
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid var(--fret-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+  width: 80px;
+  outline: none;
+  cursor: pointer;
+}
+
+.chord-edit-select option {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 4px;
+}
+
+.chord-edit-input {
+  background: rgba(0, 0, 0, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.fret-button.solo .chord-edit-select {
+  font-size: 12px;
+  width: 70px;
+}
+
+.fret-button.solo .chord-edit-input {
+  font-size: 14px;
+}
+
+/* Color variable mappings for box-shadow */
+.fret-button[style*="--fret-color: #4ade80"] {
+  --fret-color-rgb: 74, 222, 128;
+}
+
+.fret-button[style*="--fret-color: #ef4444"] {
+  --fret-color-rgb: 239, 68, 68;
+}
+
+.fret-button[style*="--fret-color: #eab308"] {
+  --fret-color-rgb: 234, 179, 8;
+}
+
+.fret-button[style*="--fret-color: #3b82f6"] {
+  --fret-color-rgb: 59, 130, 246;
+}
+
+.fret-button[style*="--fret-color: #f97316"] {
+  --fret-color-rgb: 249, 115, 22;
+}

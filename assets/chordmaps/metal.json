@@ -1,0 +1,23 @@
+{
+  "name": "Metal",
+  "default_mode": "Minor",
+  "default_key": "E",
+  "role_to_chord_quality": {
+    "I": "power5",
+    "IV": "power5", 
+    "V": "power5",
+    "bVII": "power5",
+    "II": "power5"
+  },
+  "whammy_defaults": {
+    "enabled": true,
+    "pitch_bend_range_semitones": 1.5,
+    "vibrato_depth": 0.0,
+    "filter_cutoff_enabled": false,
+    "smoothing_factor": 0.75
+  },
+  "sustain_defaults": {
+    "enabled": true,
+    "release_time_ms": 300.0
+  }
+}

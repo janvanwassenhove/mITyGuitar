@@ -1,0 +1,160 @@
+/* Fret Board Styles */
+.fret-board {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.fret-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fret-board-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.row-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 3px;
+  min-width: 40px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solo-label {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.main-label {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.fret-row-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+.fret-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  flex: 1;
+}
+  position: relative;
+}
+
+.fret-row.solo-row {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fret-row.main-row {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.fret-board-legend {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.harmonic-roles {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.role-mapping {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.fret-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.fret-color.green {
+  background: #4ade80;
+}
+
+.fret-color.red {
+  background: #ef4444;
+}
+
+.fret-color.yellow {
+  background: #eab308;
+}
+
+.fret-color.blue {
+  background: #3b82f6;
+}
+
+.fret-color.orange {
+  background: #f97316;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fret-row {
+    gap: 8px;
+  }
+  
+  .fret-board {
+    padding: 16px;
+  }
+  
+  .harmonic-roles {
+    gap: 16px;
+  }
+  
+  .role-mapping {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fret-row {
+    gap: 4px;
+  }
+  
+  .harmonic-roles {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .fret-board-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
