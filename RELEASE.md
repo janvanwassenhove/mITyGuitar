@@ -1,11 +1,11 @@
 # Release Scripts
 
-This repository contains three release scripts for building and deploying mITyGuitar desktop application releases:
+This repository contains multiple release scripts for building and deploying mITyGuitar desktop application releases across different platforms:
 
 ## Scripts
 
 ### 1. `release.bat` (Full Release - Windows)
-**Recommended for production releases**
+**Recommended for production releases on Windows**
 
 - ✅ Comprehensive validation and safety checks
 - ✅ Automatic version updating across all files
@@ -13,35 +13,34 @@ This repository contains three release scripts for building and deploying mITyGu
 - ✅ Git tagging and commit management
 - ✅ Backup and restore functionality
 - ✅ Clean working directory validation
+- ✅ Dynamic version display in Help > About
 
 **Usage:**
 ```cmd
 .\release.bat
 ```
 
-The script will:
-1. Check git repository status
-2. Prompt for version input (e.g., `1.0.0`, `0.2.1-alpha`)
-3. Update versions in all relevant files
-4. Build and test the application
-5. Create git commit and tag
-6. Optionally push to remote repository
-
 ### 2. `release.ps1` (Full Release - PowerShell)
-**Cross-platform version with additional features**
+**Cross-platform version with platform-specific builds**
 
 - ✅ All features of release.bat
 - ✅ Command-line parameters for automation
-- ✅ Better error handling
-- ✅ Colored output
+- ✅ Better error handling and colored output
+- ✅ Platform-specific build support
+- ✅ Cross-platform installer generation
 
 **Usage:**
 ```powershell
-# Interactive mode
+# Interactive mode (all platforms)
 .\release.ps1
 
 # Automated mode
 .\release.ps1 -Version "1.0.0"
+
+# Platform-specific builds
+.\release.ps1 -Version "1.0.0" -Platform "windows"
+.\release.ps1 -Version "1.0.0" -Platform "macos"
+.\release.ps1 -Version "1.0.0" -Platform "linux"
 
 # Skip tests for faster build
 .\release.ps1 -Version "0.2.0-beta" -SkipTests
@@ -55,25 +54,70 @@ The script will:
 
 **Parameters:**
 - `-Version <version>`: Specify version directly
+- `-Platform <platform>`: Target platform (windows, macos, linux, all). Default: all
 - `-SkipTests`: Skip cargo check (faster but less safe)  
 - `-SkipPush`: Don't push to remote repository
 - `-Help`: Show help message
 
-### 3. `quick-release.bat` (Development Release)
+### 3. `ci-release.ps1` (CI/CD Release)
+**For automated builds in GitHub Actions or other CI systems**
+
+- ⚡ Designed for CI environments
+- ⚡ Platform-specific cross-compilation support
+- ⚡ No interactive prompts
+
+**Usage:**
+```powershell
+# CI builds
+.\ci-release.ps1 -Version "1.0.0" -Platform "windows"
+.\ci-release.ps1 -Version "1.0.0" -Platform "macos" 
+.\ci-release.ps1 -Version "1.0.0" -Platform "linux"
+```
+
+### 4. `quick-release.bat` (Development Release)
 **For quick development/alpha releases**
 
 - ⚡ Faster build (debug mode)
 - ⚡ Minimal validation
 - ⚡ Good for development iterations
 
-**Usage:**
-```cmd
-.\quick-release.bat
-```
-
 ⚠️ **Warning:** This creates debug builds and should only be used for development/testing purposes.
 
-## Version Format
+## Platform Support
+
+### Supported Installers
+
+**Windows:**
+- 📦 **MSI Installer**: Standard Windows installer package
+- 📦 **NSIS Setup**: Executable installer with custom branding
+
+**macOS:**
+- 📦 **DMG**: Disk image for easy drag-and-drop installation
+- 📦 **APP Bundle**: Native macOS application bundle
+
+**Linux:**
+- 📦 **DEB Package**: Debian/Ubuntu package manager compatible
+- 📦 **AppImage**: Portable application format
+
+### Cross-Platform Building
+
+- **Native builds** are recommended for best compatibility
+- **Cross-compilation** is supported but may have limitations
+- **CI/CD environments** can build for multiple platforms using `ci-release.ps1`
+
+## Version Management
+
+### Dynamic Version Display
+The application now dynamically displays the current version in **Help > About** using Tauri's API. No more hardcoded version strings!
+
+### Files Updated
+The scripts automatically update versions in:
+- `Cargo.toml` (workspace)
+- `apps/desktop/package.json`
+- `apps/desktop/src-tauri/Cargo.toml`
+- `apps/desktop/src-tauri/tauri.conf.json`
+
+### Version Format
 
 All scripts support semantic versioning:
 
@@ -91,16 +135,34 @@ The scripts automatically update versions in:
 
 ## Build Artifacts
 
-After successful build, artifacts are located in:
-- **Release builds**: `apps/desktop/src-tauri/target/release/bundle/`
-- **Debug builds**: `apps/desktop/src-tauri/target/debug/bundle/`
+After successful build, platform-specific artifacts are located in:
+- **All platforms**: `apps/desktop/src-tauri/target/release/bundle/`
+
+### Platform-specific locations:
+- **Windows**: `bundle/msi/` and `bundle/nsis/`
+- **macOS**: `bundle/dmg/` and `bundle/macos/` 
+- **Linux**: `bundle/deb/` and `bundle/appimage/`
 
 ## Prerequisites
 
 - Git repository with clean working directory
 - Node.js and npm installed
-- Rust and Cargo installed
+- Rust and Cargo installed  
 - Tauri CLI installed (`npm install -g @tauri-apps/cli`)
+
+### Platform-specific prerequisites:
+
+**Windows:**
+- Windows SDK (for MSI builds)
+- NSIS (for NSIS builds) - usually installed automatically
+
+**macOS:**
+- Xcode Command Line Tools
+- macOS deployment target compatible with Tauri
+
+**Linux:**
+- Build essentials (`build-essential` on Ubuntu/Debian)
+- Additional system dependencies may be required
 
 ## Troubleshooting
 

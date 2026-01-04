@@ -10,6 +10,10 @@ param(
     [switch]$SkipPush,
     
     [Parameter(Mandatory=$false)]
+    [ValidateSet("windows", "macos", "linux", "all")]
+    [string]$Platform = "all",
+    
+    [Parameter(Mandatory=$false)]
     [switch]$Help
 )
 
@@ -18,17 +22,19 @@ if ($Help) {
 mITyGuitar Release Builder
 
 Usage:
-    .\release.ps1 [-Version <version>] [-SkipTests] [-SkipPush] [-Help]
+    .\release.ps1 [-Version <version>] [-Platform <platform>] [-SkipTests] [-SkipPush] [-Help]
 
 Parameters:
     -Version <version>  : Specify the version (e.g., 1.0.0, 0.2.1-alpha)
+    -Platform <platform>: Target platform (windows, macos, linux, all). Default: all
     -SkipTests         : Skip cargo check (faster but less safe)
     -SkipPush          : Don't push to remote repository
     -Help              : Show this help message
 
 Examples:
     .\release.ps1 -Version "1.0.0"
-    .\release.ps1 -Version "0.2.0-beta" -SkipTests
+    .\release.ps1 -Version "0.2.0-beta" -Platform "windows"
+    .\release.ps1 -Version "1.0.0" -Platform "all"
 "@
     exit 0
 }
@@ -171,15 +177,55 @@ try {
     Pop-Location
 
     # Build the Tauri application
-    Write-Host "Building Tauri application (this may take a while)..." -ForegroundColor Yellow
+    Write-Host "Building Tauri application for $Platform (this may take a while)..." -ForegroundColor Yellow
     Push-Location "apps\desktop"
-    npm run tauri build
+    
+    # Determine build command based on platform
+    $buildCommand = "npm run tauri build"
+    if ($Platform -ne "all") {
+        switch ($Platform) {
+            "windows" { 
+                $buildCommand += " -- --target-platform windows"
+                Write-Host "Building Windows installers (MSI, NSIS)..." -ForegroundColor Cyan
+            }
+            "macos" { 
+                $buildCommand += " -- --target-platform macos"
+                Write-Host "Building macOS installers (DMG, APP)..." -ForegroundColor Cyan
+                if ($env:OS -eq "Windows_NT") {
+                    Write-Host "Warning: Building for macOS from Windows may have limitations" -ForegroundColor Yellow
+                }
+            }
+            "linux" { 
+                $buildCommand += " -- --target-platform linux"
+                Write-Host "Building Linux installers (DEB, AppImage)..." -ForegroundColor Cyan
+                if ($env:OS -eq "Windows_NT") {
+                    Write-Host "Warning: Building for Linux from Windows may have limitations" -ForegroundColor Yellow
+                }
+            }
+        }
+    } else {
+        Write-Host "Building for all supported platforms..." -ForegroundColor Cyan
+    }
+    
+    Invoke-Expression $buildCommand
     if ($LASTEXITCODE -ne 0) {
         Pop-Location
         Write-Host "ERROR: Tauri build failed!" -ForegroundColor Red
         Restore-BackupFiles
     }
     Pop-Location
+
+    # Display build artifacts
+    Write-Host ""
+    Write-Host "Build completed! Available artifacts:" -ForegroundColor Green
+    $bundlePath = "apps\desktop\src-tauri\target\release\bundle"
+    if (Test-Path $bundlePath) {
+        $artifacts = Get-ChildItem -Path $bundlePath -Recurse -File | Where-Object { $_.Extension -match '\.(msi|exe|dmg|app|deb|AppImage)$' }
+        foreach ($artifact in $artifacts) {
+            $relativePath = $artifact.FullName.Replace("$PWD\", "")
+            Write-Host "  📦 $relativePath" -ForegroundColor White
+        }
+    }
 
     Write-Host ""
     Write-Host "=================================================" -ForegroundColor Green
@@ -238,7 +284,19 @@ try {
     Write-Host "Build artifacts are located in:" -ForegroundColor Yellow
     Write-Host "- apps\desktop\src-tauri\target\release\bundle\" -ForegroundColor White
     Write-Host ""
+    Write-Host "Platform-specific installers:" -ForegroundColor Yellow
+    if ($Platform -eq "all" -or $Platform -eq "windows") {
+        Write-Host "  🪟 Windows: .msi, .exe (NSIS installer)" -ForegroundColor Cyan
+    }
+    if ($Platform -eq "all" -or $Platform -eq "macos") {
+        Write-Host "  🍎 macOS: .dmg, .app bundle" -ForegroundColor Cyan
+    }
+    if ($Platform -eq "all" -or $Platform -eq "linux") {
+        Write-Host "  🐧 Linux: .deb, .AppImage" -ForegroundColor Cyan
+    }
+    Write-Host ""
     Write-Host "Git tag created: v$Version" -ForegroundColor Yellow
+    Write-Host "App version updated in Help > About dialog" -ForegroundColor Yellow
     Write-Host ""
     if (-not $SkipPush -and ($pushChoice -eq "y" -or $pushChoice -eq "Y")) {
         Write-Host "You can now create a GitHub release at:" -ForegroundColor Yellow

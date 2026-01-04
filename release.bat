@@ -176,7 +176,13 @@ echo.
 echo Build artifacts are located in:
 echo - apps\desktop\src-tauri\target\release\bundle\
 echo.
+echo Platform-specific installers:
+echo   Windows: .msi, .exe (NSIS installer)
+echo   macOS: .dmg, .app bundle (if built on macOS)
+echo   Linux: .deb, .AppImage (if built on Linux)
+echo.
 echo Git tag created: v%new_version%
+echo App version updated in Help ^> About dialog
 echo.
 if /i "%push_choice%"=="y" (
     echo You can now create a GitHub release at:

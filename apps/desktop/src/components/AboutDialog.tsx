@@ -1,10 +1,27 @@
 import { X } from "lucide-react";
+import { getVersion } from '@tauri-apps/api/app';
+import { useState, useEffect } from 'react';
 
 interface AboutDialogProps {
   onClose: () => void;
 }
 
 export default function AboutDialog({ onClose }: AboutDialogProps) {
+  const [appVersion, setAppVersion] = useState<string>('Loading...');
+
+  useEffect(() => {
+    const fetchVersion = async () => {
+      try {
+        const version = await getVersion();
+        setAppVersion(`Version ${version}`);
+      } catch (error) {
+        console.error('Failed to get app version:', error);
+        setAppVersion('Version Unknown');
+      }
+    };
+    
+    fetchVersion();
+  }, []);
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '500px' }}>
@@ -28,7 +45,7 @@ export default function AboutDialog({ onClose }: AboutDialogProps) {
               mITyGuitar
             </h3>
             <p style={{ margin: 0, fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}>
-              Version 1.0
+              {appVersion}
             </p>
           </div>
 
