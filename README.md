@@ -1,12 +1,15 @@
-# mITyGuitar 🎸
+![mITyGuitar](docs/images/mITyguitar_Logo.png)
 
 Turn your Rock Band guitar controller into a low-latency live musical instrument!
+
+
 
 ## Overview
 
 mITyGuitar is a cross-platform desktop application (Windows/macOS/Linux) that transforms Rock Band guitar controllers into expressive musical instruments. Play chords, trigger soundfonts, and perform with ultra-low latency audio synthesis.
 
 **🎵 Play along to songs, create chord progressions, or jam with genre-based patterns**
+
 
 ## Features
 
@@ -33,6 +36,11 @@ mITyGuitar is a cross-platform desktop application (Windows/macOS/Linux) that tr
 - Rust 1.70+ ([Install Rust](https://rustup.rs/))
 - Node.js 18+ ([Install Node](https://nodejs.org/))
 - Rock Band guitar controller with USB dongle (or use simulator mode)
+
+![Rock Band Guitar Controller](docs/images/controller.png)
+
+*Rock Band guitar controller - transform your gaming controller into a musical instrument*
+
 
 ### Building & Running
 
