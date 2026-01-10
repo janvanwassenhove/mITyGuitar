@@ -734,7 +734,7 @@ export default function SongLibraryView() {
                   ) : (
                     <span className="metadata-value editable" onClick={handleStartEditTimeSig} title="Click to edit">
                       {selectedSong.clock.timeSig[0]}/{selectedSong.clock.timeSig[1]} 
-                      ({beatsPerBarQN(selectedSong.clock.timeSig)} quarter beats/bar)
+                      &nbsp; ({beatsPerBarQN(selectedSong.clock.timeSig)} quarter beats/bar)
                       <span className="edit-icon">✎</span>
                     </span>
                   )}

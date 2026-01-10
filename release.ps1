@@ -14,6 +14,9 @@ param(
     [string]$Platform = "all",
     
     [Parameter(Mandatory=$false)]
+    [switch]$CreateGitHubRelease,
+    
+    [Parameter(Mandatory=$false)]
     [switch]$Help
 )
 
@@ -22,18 +25,19 @@ if ($Help) {
 mITyGuitar Release Builder
 
 Usage:
-    .\release.ps1 [-Version <version>] [-Platform <platform>] [-SkipTests] [-SkipPush] [-Help]
+    .\release.ps1 [-Version <version>] [-Platform <platform>] [-SkipTests] [-SkipPush] [-CreateGitHubRelease] [-Help]
 
 Parameters:
-    -Version <version>  : Specify the version (e.g., 1.0.0, 0.2.1-alpha)
-    -Platform <platform>: Target platform (windows, macos, linux, all). Default: all
-    -SkipTests         : Skip cargo check (faster but less safe)
-    -SkipPush          : Don't push to remote repository
-    -Help              : Show this help message
+    -Version <version>     : Specify the version (e.g., 1.0.0, 0.2.1-alpha)
+    -Platform <platform>   : Target platform (windows, macos, linux, all). Default: all
+    -SkipTests            : Skip cargo check (faster but less safe)
+    -SkipPush             : Don't push to remote repository
+    -CreateGitHubRelease  : Automatically create GitHub release with installers
+    -Help                 : Show this help message
 
 Examples:
     .\release.ps1 -Version "1.0.0"
-    .\release.ps1 -Version "0.2.0-beta" -Platform "windows"
+    .\release.ps1 -Version "0.2.0-beta" -Platform "windows" -CreateGitHubRelease
     .\release.ps1 -Version "1.0.0" -Platform "all"
 "@
     exit 0
@@ -285,8 +289,91 @@ try {
     Write-Host "App version updated in Help > About dialog" -ForegroundColor Yellow
     Write-Host ""
     if (-not $SkipPush -and ($pushChoice -eq "y" -or $pushChoice -eq "Y")) {
-        Write-Host "You can now create a GitHub release at:" -ForegroundColor Yellow
-        Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+        if ($CreateGitHubRelease) {
+            Write-Host "Creating GitHub release..." -ForegroundColor Blue
+            
+            # Check if GitHub CLI is available
+            if (Get-Command "gh" -ErrorAction SilentlyContinue) {
+                try {
+                    # Check authentication
+                    $AuthStatus = gh auth status 2>&1
+                    if ($LASTEXITCODE -eq 0) {
+                        # Generate release notes
+                        $ReleaseNotes = @"
+# mITyGuitar Desktop $Version
+
+## What's New
+- Desktop application release for Windows
+- Full featured guitar learning and practice application
+- Chord mapping and song chart support
+- Controller integration for interactive practice
+
+## Downloads
+
+### Windows Installers
+- **MSI Package**: ``mITyGuitar_${Version}_x64_en-US.msi`` - Windows Installer Package (recommended for most users)
+- **NSIS Setup**: ``mITyGuitar_${Version}_x64-setup.exe`` - Nullsoft Installer (alternative option)
+
+Both installers include the complete application with all dependencies.
+
+## System Requirements
+- Windows 10/11 (64-bit)
+- Audio device (headphones/speakers recommended)
+- Optional: MIDI controller for enhanced interaction
+
+## Installation
+1. Download your preferred installer
+2. Run the installer as administrator
+3. Follow the setup wizard
+4. Launch mITyGuitar from Start Menu or Desktop
+
+## Issues & Support
+If you encounter any issues, please report them on our [GitHub Issues](https://github.com/janvanwassenhove/mITyGuitar/issues) page.
+
+---
+Generated on $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss UTC')
+"@
+
+                        # Find installer paths
+                        $BundlePath = Join-Path (Join-Path (Join-Path $PSScriptRoot "target") "release") "bundle"
+                        $MsiPath = Join-Path (Join-Path $BundlePath "msi") "mITyGuitar_${Version}_x64_en-US.msi"
+                        $NsisPath = Join-Path (Join-Path $BundlePath "nsis") "mITyGuitar_${Version}_x64-setup.exe"
+                        
+                        # Create GitHub release
+                        $GhArgs = @("release", "create", "v$Version", "--title", "mITyGuitar Desktop $Version", "--notes", $ReleaseNotes)
+                        
+                        # Add installers if they exist
+                        if (Test-Path $MsiPath) { $GhArgs += $MsiPath }
+                        if (Test-Path $NsisPath) { $GhArgs += $NsisPath }
+                        
+                        & gh @GhArgs
+                        
+                        if ($LASTEXITCODE -eq 0) {
+                            Write-Host "✅ GitHub release created successfully!" -ForegroundColor Green
+                            Write-Host "🌐 View at: https://github.com/janvanwassenhove/mITyGuitar/releases/tag/v$Version" -ForegroundColor Cyan
+                        } else {
+                            Write-Host "❌ Failed to create GitHub release. You can create it manually." -ForegroundColor Yellow
+                            Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+                        }
+                    } else {
+                        Write-Host "❌ Not authenticated with GitHub CLI. Run: gh auth login" -ForegroundColor Yellow
+                        Write-Host "You can create the release manually at:" -ForegroundColor Yellow
+                        Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+                    }
+                } catch {
+                    Write-Host "❌ Error creating GitHub release: $($_.Exception.Message)" -ForegroundColor Yellow
+                    Write-Host "You can create it manually at:" -ForegroundColor Yellow
+                    Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+                }
+            } else {
+                Write-Host "❌ GitHub CLI not found. Install with: winget install --id GitHub.cli" -ForegroundColor Yellow
+                Write-Host "You can create the release manually at:" -ForegroundColor Yellow
+                Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+            }
+        } else {
+            Write-Host "You can create a GitHub release at:" -ForegroundColor Yellow
+            Write-Host "https://github.com/janvanwassenhove/mITyGuitar/releases/new?tag=v$Version" -ForegroundColor Cyan
+        }
         Write-Host ""
     }
 

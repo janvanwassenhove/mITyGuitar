@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Hurt",
+    "artist": "Johnny Cash",
+    "youtube": "https://www.youtube.com/watch?v=8AHCfZTRGiI&list=RD8AHCfZTRGiI&start_radio=1&pp=ygUZSm9obm55IENhc2ggSHVydCBvZmZpY2lhbKAHAQ%3D%3D",
+    "spotify": "https://open.spotify.com/track/28cnXtME493VX9NOw9cIUh"
+  },
+  "clock": {
+    "bpm": 120,
+    "timeSig": [
+      4,
+      4
+    ],
+    "countInBars": 2,
+    "subdivision": "8n",
+    "key": "C",
+    "totalTime": 76.0
+  },
+  "playback": {
+    "autostart": false,
+    "startPaused": true,
+    "countInOnPlay": true,
+    "defaultInstrument": {
+      "type": "soundfont",
+      "label": "Clean Guitar"
+    },
+    "fallbackInstrument": {
+      "type": "virtual",
+      "label": "Basic Guitar"
+    },
+    "allowUserOverrideInstrument": true
+  },
+  "mapping": {
+    "chords": {
+      "Fadd9": {
+        "frets": [
+          "GREEN",
+          "RED"
+        ]
+      },
+      "G": {
+        "frets": [
+          "RED",
+          "YELLOW",
+          "BLUE"
+        ]
+      },
+      "Am7": {
+        "frets": [
+          "YELLOW",
+          "BLUE"
+        ]
+      },
+      "D": {
+        "frets": [
+          "BLUE",
+          "ORANGE",
+          "GREEN"
+        ]
+      },
+      "Am": {
+        "frets": [
+          "ORANGE",
+          "GREEN"
+        ]
+      },
+      "C": {
+        "frets": [
+          "GREEN",
+          "RED",
+          "YELLOW"
+        ]
+      },
+      "F": {
+        "frets": [
+          "RED",
+          "YELLOW"
+        ]
+      }
+    }
+  },
+  "lanes": [
+    {
+      "name": "Main",
+      "events": [
+        {
+          "startBeat": 0,
+          "dur": 4,
+          "chord": "Am7"
+        },
+        {
+          "startBeat": 4,
+          "dur": 4,
+          "chord": "Fadd9"
+        },
+        {
+          "startBeat": 8,
+          "dur": 4,
+          "chord": "C"
+        },
+        {
+          "startBeat": 12,
+          "dur": 4,
+          "chord": "G"
+        },
+        {
+          "startBeat": 16,
+          "dur": 4,
+          "chord": "Am"
+        },
+        {
+          "startBeat": 20,
+          "dur": 4,
+          "chord": "C"
+        },
+        {
+          "startBeat": 24,
+          "dur": 4,
+          "chord": "D"
+        },
+        {
+          "startBeat": 28,
+          "dur": 4,
+          "chord": "Am"
+        }
+      ]
+    }
+  ]
+}

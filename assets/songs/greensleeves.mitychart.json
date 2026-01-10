@@ -1,126 +1,1273 @@
 {
   "meta": {
-    "title": "Greensleeves",
-    "artist": "Traditional (Public Domain)",
-    "notes": "Classic English folk song in 3/4 time",
-    "youtube": "https://www.youtube.com/watch?v=P5ItNxpwChE",
-    "spotify": "https://open.spotify.com/track/2jCnn096KePEuc0yGKOFqz"
-  },
-  "rights": {
-    "type": "public-domain"
-  },
-  "clock": {
-    "bpm": 90,
-    "timeSig": [3, 4],
-    "countInBars": 2,
-    "subdivision": "8n"
+    "title": "End Of Beginning",
+    "artist": "Djo",
+    "youtube": "https://youtu.be/xy3AcmW0lrQ",
+    "spotify": "https://open.spotify.com/track/6ZWIIawlXC4O3z9yEuJvDo"
   },
   "playback": {
     "autostart": false,
     "startPaused": true,
     "countInOnPlay": true,
-    "defaultInstrument": { "type": "soundfont", "label": "Acoustic Guitar" },
-    "fallbackInstrument": { "type": "virtual", "label": "Basic Guitar" },
+    "defaultInstrument": {
+      "type": "soundfont",
+      "label": "Clean Guitar"
+    },
+    "fallbackInstrument": {
+      "type": "virtual",
+      "label": "Basic Guitar"
+    },
     "allowUserOverrideInstrument": true
+  },
+  "clock": {
+    "bpm": 80,
+    "timeSig": [
+      4,
+      4
+    ],
+    "countInBars": 2,
+    "subdivision": "8n",
+    "key": "D"
   },
   "mapping": {
     "chords": {
-      "Am": { "frets": ["GREEN"] },
-      "G": { "frets": ["RED"] },
-      "F": { "frets": ["YELLOW"] },
-      "E": { "frets": ["BLUE"] },
-      "C": { "frets": ["ORANGE"] }
+      "A": {
+        "frets": [
+          "GREEN"
+        ]
+      },
+      "A/F": {
+        "frets": [
+          "RED"
+        ]
+      },
+      "Bm": {
+        "frets": [
+          "YELLOW"
+        ]
+      },
+      "D": {
+        "frets": [
+          "BLUE"
+        ]
+      },
+      "Em": {
+        "frets": [
+          "ORANGE"
+        ]
+      },
+      "G": {
+        "frets": [
+          "GREEN"
+        ]
+      },
+      "Gmaj7": {
+        "frets": [
+          "RED"
+        ]
+      }
     }
   },
   "lanes": [
     {
-      "name": "chords",
+      "name": "Main",
       "events": [
-        { "startBeat": 0, "dur": 3, "chord": "Am", "section": "Intro" },
-        { "startBeat": 3, "dur": 3, "chord": "G", "section": "Intro" },
-        { "startBeat": 6, "dur": 3, "chord": "Am", "section": "Intro" },
-        { "startBeat": 9, "dur": 3, "chord": "E", "section": "Intro" },
-        
-        { "startBeat": 12, "dur": 3, "chord": "Am", "section": "Verse A" },
-        { "startBeat": 15, "dur": 3, "chord": "G", "section": "Verse A" },
-        { "startBeat": 18, "dur": 3, "chord": "Am", "section": "Verse A" },
-        { "startBeat": 21, "dur": 3, "chord": "E", "section": "Verse A" },
-        { "startBeat": 24, "dur": 3, "chord": "Am", "section": "Verse A" },
-        { "startBeat": 27, "dur": 3, "chord": "G", "section": "Verse A" },
-        { "startBeat": 30, "dur": 3, "chord": "Am", "section": "Verse A" },
-        { "startBeat": 33, "dur": 3, "chord": "E", "section": "Verse A" },
-        
-        { "startBeat": 36, "dur": 3, "chord": "C", "section": "Verse B" },
-        { "startBeat": 39, "dur": 3, "chord": "G", "section": "Verse B" },
-        { "startBeat": 42, "dur": 3, "chord": "Am", "section": "Verse B" },
-        { "startBeat": 45, "dur": 3, "chord": "E", "section": "Verse B" },
-        { "startBeat": 48, "dur": 3, "chord": "C", "section": "Verse B" },
-        { "startBeat": 51, "dur": 3, "chord": "G", "section": "Verse B" },
-        { "startBeat": 54, "dur": 3, "chord": "Am", "section": "Verse B" },
-        { "startBeat": 57, "dur": 3, "chord": "E", "section": "Verse B" },
-        
-        { "startBeat": 60, "dur": 3, "chord": "Am", "section": "Outro" },
-        { "startBeat": 63, "dur": 3, "chord": "G", "section": "Outro" },
-        { "startBeat": 66, "dur": 3, "chord": "Am", "section": "Outro" },
-        { "startBeat": 69, "dur": 3, "chord": "Am", "section": "Outro" }
+        {
+          "startBeat": 4.0,
+          "dur": 7.15,
+          "chord": "D"
+        },
+        {
+          "startBeat": 11.15,
+          "dur": 2.65,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 13.8,
+          "dur": 2.2,
+          "chord": "A"
+        },
+        {
+          "startBeat": 16.0,
+          "dur": 6.96,
+          "chord": "D"
+        },
+        {
+          "startBeat": 22.96,
+          "dur": 1.04,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 24.0,
+          "dur": 0.87,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 24.87,
+          "dur": 1.2,
+          "chord": "A"
+        },
+        {
+          "startBeat": 26.07,
+          "dur": 1.09,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 27.16,
+          "dur": 0.84,
+          "chord": "A"
+        },
+        {
+          "startBeat": 28.0,
+          "dur": 1.26,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 29.26,
+          "dur": 0.99,
+          "chord": "D"
+        },
+        {
+          "startBeat": 30.25,
+          "dur": 0.72,
+          "chord": "A"
+        },
+        {
+          "startBeat": 30.97,
+          "dur": 1.88,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 32.85,
+          "dur": 1.16,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 34.01,
+          "dur": 1.38,
+          "chord": "A"
+        },
+        {
+          "startBeat": 35.39,
+          "dur": 1.65,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 37.04,
+          "dur": 1.04,
+          "chord": "D"
+        },
+        {
+          "startBeat": 38.08,
+          "dur": 0.85,
+          "chord": "A"
+        },
+        {
+          "startBeat": 38.94,
+          "dur": 1.06,
+          "chord": "G"
+        },
+        {
+          "startBeat": 40.0,
+          "dur": 7.07,
+          "chord": "D"
+        },
+        {
+          "startBeat": 47.07,
+          "dur": 2.5,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 49.57,
+          "dur": 2.43,
+          "chord": "A"
+        },
+        {
+          "startBeat": 52.0,
+          "dur": 3.27,
+          "chord": "D"
+        },
+        {
+          "startBeat": 55.27,
+          "dur": 0.73,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 56.0,
+          "dur": 0.59,
+          "chord": "Em"
+        },
+        {
+          "startBeat": 56.59,
+          "dur": 3.41,
+          "chord": "A"
+        },
+        {
+          "startBeat": 60.0,
+          "dur": 1.26,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 61.26,
+          "dur": 0.99,
+          "chord": "D"
+        },
+        {
+          "startBeat": 62.25,
+          "dur": 0.72,
+          "chord": "A"
+        },
+        {
+          "startBeat": 62.97,
+          "dur": 1.88,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 64.85,
+          "dur": 1.16,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 66.01,
+          "dur": 1.38,
+          "chord": "A"
+        },
+        {
+          "startBeat": 67.39,
+          "dur": 1.65,
+          "chord": "Gmaj7"
+        },
+        {
+          "startBeat": 69.04,
+          "dur": 1.04,
+          "chord": "D"
+        },
+        {
+          "startBeat": 70.08,
+          "dur": 0.85,
+          "chord": "A"
+        },
+        {
+          "startBeat": 70.94,
+          "dur": 9.06,
+          "chord": "G"
+        },
+        {
+          "startBeat": 80.0,
+          "dur": 2.75,
+          "chord": "A"
+        },
+        {
+          "startBeat": 82.75,
+          "dur": 1.25,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 84.0,
+          "dur": 2.75,
+          "chord": "A"
+        },
+        {
+          "startBeat": 86.75,
+          "dur": 1.25,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 88.0,
+          "dur": 2.75,
+          "chord": "A"
+        },
+        {
+          "startBeat": 90.75,
+          "dur": 5.25,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 96.0,
+          "dur": 1.26,
+          "chord": "G"
+        },
+        {
+          "startBeat": 97.26,
+          "dur": 0.99,
+          "chord": "D"
+        },
+        {
+          "startBeat": 98.25,
+          "dur": 0.72,
+          "chord": "A"
+        },
+        {
+          "startBeat": 98.97,
+          "dur": 1.81,
+          "chord": "G"
+        },
+        {
+          "startBeat": 100.78,
+          "dur": 1.07,
+          "chord": "Bm"
+        },
+        {
+          "startBeat": 101.85,
+          "dur": 0.97,
+          "chord": "A"
+        },
+        {
+          "startBeat": 102.82,
+          "dur": 0.58,
+          "chord": "A/F"
+        },
+        {
+          "startBeat": 103.41,
+          "dur": 1.64,
+          "chord": "G"
+        },
+        {
+          "startBeat": 105.04,
+          "dur": 1.04,
+          "chord": "D"
+        },
+        {
+          "startBeat": 106.08,
+          "dur": 0.85,
+          "chord": "A"
+        },
+        {
+          "startBeat": 106.94,
+          "dur": 9.06,
+          "chord": "G"
+        }
       ]
     }
   ],
   "lyrics": [
-    { "startBeat": 0, "annotations": [
-      { "word": "♪", "timeBeat": 0.0 },
-      { "word": "Instrumental", "timeBeat": 1.0 },
-      { "word": "intro", "timeBeat": 5.0 },
-      { "word": "♪", "timeBeat": 8.0 }
-    ]},
-    { "startBeat": 12, "annotations": [
-      { "word": "Alas,", "timeBeat": 0.0 },
-      { "word": "my", "timeBeat": 1.5 },
-      { "word": "love,", "timeBeat": 3.0 },
-      { "word": "you", "timeBeat": 4.5 },
-      { "word": "do", "timeBeat": 6.0 },
-      { "word": "me", "timeBeat": 7.5 },
-      { "word": "wrong", "timeBeat": 9.0 }
-    ]},
-    { "startBeat": 24, "annotations": [
-      { "word": "To", "timeBeat": 0.0 },
-      { "word": "cast", "timeBeat": 1.5 },
-      { "word": "me", "timeBeat": 3.0 },
-      { "word": "off", "timeBeat": 4.5 },
-      { "word": "discourteously", "timeBeat": 6.0 }
-    ]},
-    { "startBeat": 36, "annotations": [
-      { "word": "For", "timeBeat": 0.0 },
-      { "word": "I", "timeBeat": 1.5 },
-      { "word": "have", "timeBeat": 3.0 },
-      { "word": "loved", "timeBeat": 4.5 },
-      { "word": "you", "timeBeat": 6.0 },
-      { "word": "oh", "timeBeat": 7.5 },
-      { "word": "so", "timeBeat": 8.0 },
-      { "word": "long", "timeBeat": 9.0 }
-    ]},
-    { "startBeat": 48, "annotations": [
-      { "word": "Delighting", "timeBeat": 0.0 },
-      { "word": "in", "timeBeat": 3.0 },
-      { "word": "your", "timeBeat": 4.5 },
-      { "word": "company", "timeBeat": 6.0 }
-    ]},
-    { "startBeat": 60, "annotations": [
-      { "word": "♪", "timeBeat": 0.0 },
-      { "word": "Greensleeves", "timeBeat": 3.0 },
-      { "word": "♪", "timeBeat": 6.0 }
-    ]}
+    {
+      "startBeat": 4.0,
+      "annotations": [
+        {
+          "word": "Just",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "one",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "more",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "tear",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "to",
+          "timeBeat": 4.0
+        },
+        {
+          "word": "cry",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 8.0,
+      "annotations": [
+        {
+          "word": "One",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "teardrop",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "from",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "my",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "eye",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 12.0,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "better",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "save",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "it",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "for",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 16.0,
+      "annotations": [
+        {
+          "word": "The",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "middle",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "of",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "night",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 20.0,
+      "annotations": [
+        {
+          "word": "When",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "things",
+          "timeBeat": 1.5
+        },
+        {
+          "word": "aren't",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "black-and-white",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 24.0,
+      "annotations": [
+        {
+          "word": "Enter,",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "Troubadour:'Remember",
+          "timeBeat": 1.5
+        },
+        {
+          "word": "24?'",
+          "timeBeat": 3.2
+        }
+      ]
+    },
+    {
+      "startBeat": 28.0,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "when",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "I'm",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "back",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "in",
+          "timeBeat": 4.0
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "I",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "feel",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 32.0,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "version",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "of",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "me,",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "I",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "was",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "in",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 36.0,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "wave",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "to",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "end",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "beginning",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 40.0,
+      "annotations": [
+        {
+          "word": "This",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "song",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "has",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "started",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "now",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 44.0,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "you're",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "just",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "finding",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "out",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 48.0,
+      "annotations": [
+        {
+          "word": "Now",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "isn't",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "that",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "a",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "laugh?",
+          "timeBeat": 4.8
+        }
+      ]
+    },
+    {
+      "startBeat": 52.0,
+      "annotations": [
+        {
+          "word": "A",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "major",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "sacrifice,",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "but",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "clueless",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "at",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "time",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 56.0,
+      "annotations": [
+        {
+          "word": "Enter,",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "Caroline:",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "\"Just",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "trust",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "me,",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "you'll",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "be",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "fine\"",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 60.0,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "when",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "I'm",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "back",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "in",
+          "timeBeat": 4.0
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "I",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "feel",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 64.0,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "version",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "of",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "me,",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "I",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "was",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "in",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 68.0,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "wave",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "to",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "end",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "beginning",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 72.0,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": 3.2
+        }
+      ]
+    },
+    {
+      "startBeat": 76.0,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": 3.2
+        }
+      ]
+    },
+    {
+      "startBeat": 80.0,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "take",
+          "timeBeat": 0.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "man",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "city,",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "not",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "city",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 7.5
+        },
+        {
+          "word": "man",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 84.0,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "take",
+          "timeBeat": 0.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "man",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "city,",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "not",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "city",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 7.5
+        },
+        {
+          "word": "man",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 88.0,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "take",
+          "timeBeat": 0.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "man",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "city,",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "not",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "city",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "the",
+          "timeBeat": 7.5
+        },
+        {
+          "word": "man",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 92.0,
+      "annotations": [
+        {
+          "word": "You",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "take",
+          "timeBeat": 1.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "man",
+          "timeBeat": 4.0
+        },
+        {
+          "word": "out",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 6.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 96.0,
+      "annotations": [
+        {
+          "word": "And",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "when",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "I'm",
+          "timeBeat": 2.0
+        },
+        {
+          "word": "back",
+          "timeBeat": 3.0
+        },
+        {
+          "word": "in",
+          "timeBeat": 4.0
+        },
+        {
+          "word": "Chicago,",
+          "timeBeat": 5.0
+        },
+        {
+          "word": "I",
+          "timeBeat": 6.0
+        },
+        {
+          "word": "feel",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 100.0,
+      "annotations": [
+        {
+          "word": "Another",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "version",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "of",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "me,",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "I",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "was",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "in",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "it",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 104.0,
+      "annotations": [
+        {
+          "word": "I",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "wave",
+          "timeBeat": 1.0
+        },
+        {
+          "word": "goodbye",
+          "timeBeat": 2.5
+        },
+        {
+          "word": "to",
+          "timeBeat": 3.5
+        },
+        {
+          "word": "the",
+          "timeBeat": 4.5
+        },
+        {
+          "word": "end",
+          "timeBeat": 5.5
+        },
+        {
+          "word": "of",
+          "timeBeat": 7.0
+        },
+        {
+          "word": "beginning",
+          "timeBeat": 8.0
+        }
+      ]
+    },
+    {
+      "startBeat": 108.0,
+      "annotations": [
+        {
+          "word": "(Goodbye,",
+          "timeBeat": 0.0
+        },
+        {
+          "word": "goodbye)",
+          "timeBeat": 3.2
+        }
+      ]
+    }
   ],
   "sections": [
-    { "name": "Count-in", "fromBeat": -6, "toBeat": 0 },
-    { "name": "Intro", "fromBeat": 0, "toBeat": 12 },
-    { "name": "Verse A", "fromBeat": 12, "toBeat": 36 },
-    { "name": "Verse B", "fromBeat": 36, "toBeat": 60 },
-    { "name": "Outro", "fromBeat": 60, "toBeat": 72 }
-  ],
-  "timing_assumptions": {
-    "method": "grid",
-    "rule": "one bar (3 beats) per chord",
-    "feel": "Waltz (3/4 time)"
-  }
+    {
+      "name": "Intro",
+      "fromBeat": 0,
+      "toBeat": 2
+    },
+    {
+      "name": "Verse 1",
+      "fromBeat": 2,
+      "toBeat": 26
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 26,
+      "toBeat": 38
+    },
+    {
+      "name": "Verse 2",
+      "fromBeat": 38,
+      "toBeat": 58
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 58,
+      "toBeat": 78
+    },
+    {
+      "name": "Bridge",
+      "fromBeat": 78,
+      "toBeat": 94
+    },
+    {
+      "name": "Chorus",
+      "fromBeat": 94,
+      "toBeat": 110
+    }
+  ]
 }

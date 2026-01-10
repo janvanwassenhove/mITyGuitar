@@ -118,6 +118,7 @@ export default function SongPlayView() {
   const [countdown, setCountdown] = useState<number | null>(null);
   const [showUploadDialog, setShowUploadDialog] = useState(false);
   const [uploadResult, setUploadResult] = useState<{ songName: string; isError: boolean; errorMessage?: string } | null>(null);
+  const [timelineMode, setTimelineMode] = useState<'beats' | 'seconds'>('beats');
   
   const prevStrumRef = useRef({ up: false, down: false });
   const animationRef = useRef<number | null>(null);
@@ -348,10 +349,10 @@ export default function SongPlayView() {
   const handlePlay = async () => {
     try {
       // Start countdown from 3
-      setCountdown(3);
+      let count = 3;
+      setCountdown(count);
       
       // Countdown timer
-      let count = 3;
       const countdownInterval = setInterval(() => {
         count--;
         if (count > 0) {
@@ -491,6 +492,40 @@ export default function SongPlayView() {
     return Math.min(100, (transport.current_beat / total) * 100);
   };
 
+  const beatsToSeconds = (beats: number): number => {
+    if (!transport) return 0;
+    // seconds = beats * (60 / bpm)
+    return beats * (60 / transport.bpm);
+  };
+
+  const formatTime = (seconds: number): string => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const getCurrentDisplay = (): string => {
+    if (!transport) return timelineMode === 'beats' ? 'Beat 0 / 0' : '0:00 / 0:00';
+    
+    // Handle count-in (negative beats)
+    if (transport.current_beat < 0) {
+      if (timelineMode === 'beats') {
+        return `Count-in: ${Math.ceil(Math.abs(transport.current_beat))}`;
+      } else {
+        const countInSeconds = Math.abs(beatsToSeconds(transport.current_beat));
+        return `Count-in: ${Math.ceil(countInSeconds)}s`;
+      }
+    }
+    
+    if (timelineMode === 'beats') {
+      return `Beat ${Math.floor(transport.current_beat)} / ${getTotalBeats()}`;
+    } else {
+      const currentSeconds = beatsToSeconds(transport.current_beat);
+      const totalSeconds = beatsToSeconds(getTotalBeats());
+      return `${formatTime(currentSeconds)} / ${formatTime(totalSeconds)}`;
+    }
+  };
+
   if (loading) {
     return (
       <div className="song-play-view">
@@ -620,7 +655,25 @@ export default function SongPlayView() {
       <div className="main-play-area">
         <div className="progress-bar-container">
           <div className="progress-info">
-            <span>Beat {Math.floor(transport.current_beat)} / {getTotalBeats()}</span>
+            <span>{getCurrentDisplay()}</span>
+            <button 
+              className="timeline-toggle-btn"
+              onClick={() => setTimelineMode(timelineMode === 'beats' ? 'seconds' : 'beats')}
+              title={`Switch to ${timelineMode === 'beats' ? 'time' : 'beats'} display`}
+            >
+              {timelineMode === 'beats' ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18V5l12-2v13"></path>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+              )}
+            </button>
             <span>{getProgressPercentage().toFixed(1)}%</span>
           </div>
           <div className="progress-bar">
@@ -640,8 +693,8 @@ export default function SongPlayView() {
           />
           {countdown !== null && (
             <div className="countdown-overlay">
-              <div className="countdown-number">{countdown}</div>
-              <div className="countdown-text">Get Ready!</div>
+              <div key={countdown} className="countdown-number">{countdown}</div>
+              <div key={`text-${countdown}`} className="countdown-text">Get Ready!</div>
             </div>
           )}
         </div>
